@@ -21,6 +21,14 @@
   letter-spacing: 0;
   text-align: center;
 }
+.clickBig {
+  position: relative;
+}
+.clickBig::after {
+  content: "";
+  position: absolute;
+  right: -0.2rem;
+}
 footer {
   line-height: 0.34rem;
   font-family: PingFangSC-Regular;
@@ -49,7 +57,6 @@ form .formItem span {
   letter-spacing: 0;
 }
 form .formItem p {
-  flex: 1;
   height: 100%;
 }
 form .formItem input {

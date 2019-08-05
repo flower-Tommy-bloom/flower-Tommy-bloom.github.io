@@ -24,7 +24,14 @@
     letter-spacing: 0;
     text-align: center;
 }
-
+.clickBig {
+    position: relative;
+}
+.clickBig::after {
+    content: "";
+    position: absolute;
+    right: -0.2rem;
+}
 footer {
     text-align: center;
     line-height: 0.34rem;
@@ -56,7 +63,6 @@ form {
             letter-spacing: 0;
         }
         p{
-            flex: 1;
             height: 100%;
         }
         input {
