@@ -48,6 +48,10 @@ form .formItem span {
   color: #333333;
   letter-spacing: 0;
 }
+form .formItem p {
+  flex: 1;
+  height: 100%;
+}
 form .formItem input {
   flex: 1;
   height: 100%;
