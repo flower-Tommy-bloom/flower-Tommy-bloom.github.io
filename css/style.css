@@ -125,7 +125,7 @@ form .formItem img {
   width: 4.68rem;
   height: 0.8rem;
   margin: 0 auto;
-  border: 0.02rem solid #D8D8D8;
+  border: 0.01rem solid #D8D8D8;
   overflow: hidden;
   border-radius: 0.12rem;
   position: relative;
@@ -173,7 +173,7 @@ form .formItem img {
 .popup .chooseTel .emtryNum {
   display: none;
   text-align: center;
-  border-bottom: 0.02rem solid #ebebeb;
+  border-bottom: 0.01rem solid #ebebeb;
 }
 .popup .chooseTel .emtryNum img {
   width: 1.54rem;
@@ -192,7 +192,7 @@ form .formItem img {
   height: 0.72rem;
   line-height: 0.68rem;
   margin: 0.4rem 0 1.02rem;
-  border: 0.02rem solid #999999;
+  border: 0.01rem solid #999999;
   background-color: #fff;
   border-radius: 0.44rem;
   font-family: PingFangSC-Medium;
