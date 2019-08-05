@@ -56,9 +56,6 @@ form .formItem span {
   color: #333333;
   letter-spacing: 0;
 }
-form .formItem p {
-  height: 100%;
-}
 form .formItem input {
   flex: 1;
   height: 100%;
@@ -68,6 +65,23 @@ form .formItem input {
   color: #333333;
   letter-spacing: 0;
   width: 4rem;
+}
+form .formItem p {
+  position: relative;
+  height: 100%;
+  width: 5rem;
+}
+form .formItem p input {
+  width: 100%;
+}
+form .formItem p::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 1rem;
+  height: 100%;
+  right: -0.7rem;
+  z-index: 2;
 }
 form .formItem input:disabled {
   background-color: #fff;
@@ -279,7 +293,7 @@ form .formItem img {
   left: 50%;
   transform: translateX(-50%);
   width: 5.4rem;
-  height: 5.04rem!important;
+  height: 5.04rem !important;
   border-radius: 0.16rem;
   overflow: hidden;
   background-color: #fff;
@@ -288,7 +302,7 @@ form .formItem img {
   border-bottom: none;
   padding-top: 0.4rem;
   background-color: #fff;
-  height: 1.26rem!important;
+  height: 1.26rem !important;
 }
 #sign .layer header h2 {
   line-height: 0.54rem;

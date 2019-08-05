@@ -24,14 +24,17 @@
     letter-spacing: 0;
     text-align: center;
 }
+
 .clickBig {
     position: relative;
 }
+
 .clickBig::after {
     content: "";
     position: absolute;
     right: -0.2rem;
 }
+
 footer {
     text-align: center;
     line-height: 0.34rem;
@@ -62,9 +65,7 @@ form {
             color: #333333;
             letter-spacing: 0;
         }
-        p{
-            height: 100%;
-        }
+
         input {
             flex: 1;
             height: 100%;
@@ -75,11 +76,31 @@ form {
             letter-spacing: 0;
             width: 4rem;
         }
-        input:disabled{
+
+        p {
+            position: relative;
+            height: 100%;
+            width: 5rem;
+            input {
+                width: 100%;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                width: 1rem;
+                height: 100%;
+                right: -0.7rem;
+                z-index: 2;
+            }
+        }
+
+        input:disabled {
             background-color: #fff;
             color: #000;
             opacity: 1;
         }
+
         img {
             position: absolute;
             top: 50%;
@@ -98,6 +119,7 @@ form {
     left: 0;
     right: 0;
     bottom: 0;
+
     .ink {
         position: absolute;
         width: 100%;
@@ -310,23 +332,26 @@ form {
         }
     }
 }
+
 // .选择器样式
-#sign .layer{
+#sign .layer {
     top: 4.46rem;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0.16rem;
     width: 5.4rem;
-    height: 5.04rem!important;
+    height: 5.04rem !important;
     border-radius: 0.16rem;
     overflow: hidden;
     background-color: #fff;
-    header{
+
+    header {
         border-bottom: none;
         padding-top: 0.4rem;
         background-color: #fff;
-        height: 1.26rem!important;
-        h2{
+        height: 1.26rem !important;
+
+        h2 {
             line-height: 0.54rem;
             font-family: PingFangSC-Medium;
             font-size: 0.36rem;
@@ -335,29 +360,34 @@ form {
             text-align: center;
             font-weight: bold;
         }
-        a{
+
+        a {
             display: none;
         }
     }
-    section{
+
+    section {
         position: absolute;
         width: 100%;
         top: -32px;
         z-index: -1;
     }
-    footer{
+
+    footer {
         position: absolute;
         width: 100%;
         bottom: 0;
-        > div{
-            background: rgba(255,255,255,0.00);
+
+        >div {
+            background: rgba(255, 255, 255, 0.00);
             box-shadow: 0 0 0 0 #D8D8D8;
             height: 0.88rem;
             display: flex;
             justify-content: center;
             align-items: center;
             border-top: 0.02rem solid #ebebeb;
-            span{
+
+            span {
                 flex: 1;
                 height: 100%;
                 line-height: 0.88rem;
@@ -365,7 +395,8 @@ form {
                 font-size: 0.32rem;
                 color: #666666;
                 letter-spacing: 0;
-                &:nth-child(2){
+
+                &:nth-child(2) {
                     border-left: 0.02rem solid #ebebeb;
                     color: #4D69A6;
                 }
@@ -373,6 +404,7 @@ form {
         }
     }
 }
+
 // 公告样式结束
 // 首页
 .index .register {
@@ -481,6 +513,7 @@ form {
         font-size: 0.26rem;
         color: #333333;
         letter-spacing: 0;
+
         span {
             font-family: PingFangSC-Regular;
             color: #cea68a;
@@ -584,24 +617,29 @@ form {
         width: 7.5rem;
         height: 5.4rem;
     }
-    .idNoWorry{
+
+    .idNoWorry {
         display: none;
         background: #FFFFFF;
         height: 7.48rem;
-        .idNoInfo{
+
+        .idNoInfo {
             margin-top: 0;
             color: #516ca8;
         }
-        .btn{
+
+        .btn {
             width: 5.9rem;
             margin-top: 0.8rem;
         }
     }
-    .success{
+
+    .success {
         display: none;
         height: 5.4rem;
         background-color: #fff;
-        p{
+
+        p {
             margin: 0.5rem auto 0;
             width: 4.5rem;
             text-align: center;

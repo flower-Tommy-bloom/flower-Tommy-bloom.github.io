@@ -7,7 +7,7 @@
   height: 5.28rem;
 }
 .index .top img {
-  width: 7.5rem;
+  width: 100%;
 }
 .index h1 {
   position: relative;
@@ -27,14 +27,23 @@
 }
 .index h1 .more {
   position: absolute;
-  right: .1rem;
-  bottom: -0.25rem;
+  right: .15rem;
+  bottom: -0.3rem;
   font-family: SourceHanSansCN-Bold;
-  font-size: 0.22rem;
-  font-weight: normal;
+  font-size: 0.16rem;
+  font-weight: bold;
   font-stretch: normal;
   letter-spacing: 0rem;
   color: #cf3656;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.index h1 .more img {
+  width: 0.14rem;
+  height: 0.18rem;
+  margin-left: .02rem;
+  margin-top: .02rem;
 }
 .index h2 {
   margin-top: 0.86rem;
