@@ -85,13 +85,13 @@
             </div>
             <div class="li">
                 <img class="logo" src="./img/pp（小）.png" alt="">
-                <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="" data-name="PPTV">
+                <span>前三个月12元／月</span>
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="PPTV" data-beforePrice="12" data-afterPrice="17">
             </div>
             <div class="li">
                 <img class="logo" src="./img/芒果tv（小）.png" alt="">
-                <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="" data-name="芒果">
+                <span>前三个月11元／月</span>
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="芒果"  data-beforePrice="11" data-afterPrice="16">
             </div>
         </div>
         <div class="long clearfix">
@@ -133,7 +133,7 @@
             <span class="tel">188****0000</span>
             <p class="tc">您将办理</p>
             <p class="manageText">1、爱奇艺会员权益年包，内含每月会员+15G视频定向流量；</p>
-            <p>2、前3个月每月17元，后9个月每月22元；</p>
+            <p class="price">2、前3个月每月17元，后9个月每月22元；</p>
             <p>3、每月自动续订，连续订购12个月，订购期内不能退订；</p>
             <p class="enter tc">是否确认办理？</p>
             <div class="btns">
@@ -160,9 +160,12 @@
         $('.threeMonthSale').show()
     })
     // 年包立即抢
-    $('.part2 .buy').click(function () {
+    $('.fourBox .buy').click(function () {
         $('.pupop').show()
         $('.year .manageText').html('1、'+ this.getAttribute('data-name') +'会员权益年包，内含每月会员+15G视频定向流量；')
+        if(this.getAttribute('data-beforePrice') && this.getAttribute('data-afterPrice') ){
+            $('.year .price').html('2、前3个月每月'+ this.getAttribute('data-beforePrice')+'元，后9个月每月'+this.getAttribute('data-afterPrice')+'元；')
+        }
         $('.year').show()
     })
     // 取消
