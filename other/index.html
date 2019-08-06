@@ -30,7 +30,7 @@
             <img class="logo" src="./img/抖音图标.png" alt="">
             <span class="title">抖音视频</span>
             <span class="docs">首月免单立抢</span>
-            <img class="btn" src="./img/立即抢按钮.png" alt="">
+            <img class="btn" src="./img/立即抢按钮.png" alt="" data-name="抖音视频">
         </p>
         <p class="free">
             <img class="back" src="./img/爱奇艺底图.png" alt="">
@@ -38,7 +38,7 @@
             <img class="logo" src="./img/爱奇艺（小）.png" alt="">
             <span class="title">爱奇艺</span>
             <span class="docs">首月免单立抢</span>
-            <img class="btn" src="./img/立即抢按钮.png" alt="">
+            <img class="btn" src="./img/立即抢按钮.png" alt="" data-name="爱奇艺">
         </p>
         <p class="free">
             <img class="back" src="./img/腾讯底图.png" alt="">
@@ -46,7 +46,7 @@
             <img class="logo" src="./img/腾讯.png" alt="">
             <span class="title">腾讯视频</span>
             <span class="docs">首月免单立抢</span>
-            <img class="btn" src="./img/立即抢按钮.png" alt="">
+            <img class="btn" src="./img/立即抢按钮.png" alt="" data-name="腾讯视频">
         </p>
         <div class="twoFree">
             <p>
@@ -55,15 +55,15 @@
                 <img class="logo" src="./img/优酷（小）.png" alt="">
                 <span class="title">优酷视频</span>
                 <span class="docs">首月免单立抢</span>
-                <img class="btn" src="./img/立即抢按钮.png" alt="">
+                <img class="btn" src="./img/立即抢按钮.png" alt="" data-name="优酷视频">
             </p>
             <p>
                 <img class="back" src="./img/芒果tv底图.png" alt="">
-                <img class="cover" src="" alt="">
+                <img class="cover" src="#" alt="">
                 <img class="logo" src="./img/芒果tv（小）.png" alt="">
                 <span class="title">芒果TV</span>
                 <span class="docs">首月免单立抢</span>
-                <img class="btn" src="./img/立即抢按钮.png" alt="">
+                <img class="btn" src="./img/立即抢按钮.png" alt="" data-name="芒果TV">
             </p>
 
         </div>
@@ -76,22 +76,22 @@
             <div class="li">
                 <img class="logo" src="./img/爱奇艺（小）.png" alt="">
                 <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="">
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="爱奇艺">
             </div>
             <div class="li">
                 <img class="logo" src="./img/优酷（小）.png" alt="">
                 <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="">
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="优酷视频">
             </div>
             <div class="li">
                 <img class="logo" src="./img/pp（小）.png" alt="">
                 <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="">
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="pptv">
             </div>
             <div class="li">
                 <img class="logo" src="./img/芒果tv（小）.png" alt="">
                 <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="">
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="芒果tv">
             </div>
         </div>
         <div class="long clearfix">
@@ -99,7 +99,7 @@
             <img class="add" src="./img/+.png" alt="">
             <img class="logo" src="./img/聚合.png" alt="">
             <span>联合会员+30G流量</span>
-            <img class="buy" src="./img/立即抢2.png" alt="">
+            <img class="buy" src="./img/立即抢2.png" alt="" data-name="爱奇艺+咪咕视频">
         </div>
     </section>
     <div class="rule">
@@ -118,9 +118,9 @@
         </div>
     </div>
     <div class="pupop">
-        <div class="threeM enterbuy">
+        <div class="threeMonthSale enterbuy">
             <span class="tel">188****0000</span>
-            <p>您将办理</p>
+            <p class="manageText">您将办理</p>
             <p>9元15G／月定向流量包，首月扣9元送9元，</p>
             <p>退订后再次订购不再享受优惠，</p>
             <p class="enter">是否确认办理？</p>
@@ -131,7 +131,7 @@
         </div>
         <div class="enterbuy year">
             <span class="tel">188****0000</span>
-            <p class="tc">您将办理</p>
+            <p class="tc manageText">您将办理</p>
             <p>1、爱奇艺会员权益年包，内含每月会员+15G视频定向流量；</p>
             <p>2、前3个月每月17元，后9个月每月22元；</p>
             <p>3、每月自动续订，连续订购12个月，订购期内不能退订；</p>
@@ -148,7 +148,7 @@
 <script src="./js/rem.js"></script>
 <script src="./js/jq.js"></script>
 <script>
-    // 任我看跳转
+    // 任我看跳转 monthSale
     $('h1 .logo').click(function () {
         console.log(11)
         window.location.href =
@@ -157,17 +157,22 @@
     // 立即抢
     $('.part1 .btn').click(function () {
         $('.pupop').show()
-        $('.threeM').show()
+        $('.threeMonthSale .manageText').html('您将办理' + this.getAttribute('data-name'))
+        $('.threeMonthSale').show()
     })
     // 年包立即抢
     $('.part2 .buy').click(function () {
         $('.pupop').show()
+        $('.year .manageText').html('您将办理' + this.getAttribute('data-name'))
         $('.year').show()
     })
     // 取消
     $('.cancel').click(function () {
         $('.pupop').hide()
-        $('.threeM').hide()
+        $('.threeMonthSale').hide()
         $('.year').hide()
+    })
+    $('.more').click(function(){
+        $('html , body').animate({scrollTop: $('.rule').offset().top}, 1000);
     })
 </script>
