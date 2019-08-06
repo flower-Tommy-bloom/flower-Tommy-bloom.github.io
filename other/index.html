@@ -6,9 +6,6 @@
     <meta name="viewport"
         content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum=scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="Cache" content="no-cache">
     <title>Document</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -84,17 +81,17 @@
             <div class="li">
                 <img class="logo" src="./img/优酷（小）.png" alt="">
                 <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="" data-name="优酷视频">
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="优酷">
             </div>
             <div class="li">
                 <img class="logo" src="./img/pp（小）.png" alt="">
                 <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="" data-name="pptv">
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="PPTV">
             </div>
             <div class="li">
                 <img class="logo" src="./img/芒果tv（小）.png" alt="">
                 <span>前三个月17元／月</span>
-                <img class="buy" src="./img/立即抢2.png" alt="" data-name="芒果tv">
+                <img class="buy" src="./img/立即抢2.png" alt="" data-name="芒果">
             </div>
         </div>
         <div class="long clearfix">
@@ -134,8 +131,8 @@
         </div>
         <div class="enterbuy year">
             <span class="tel">188****0000</span>
-            <p class="tc manageText">您将办理</p>
-            <p>1、爱奇艺会员权益年包，内含每月会员+15G视频定向流量；</p>
+            <p class="tc">您将办理</p>
+            <p class="manageText">1、爱奇艺会员权益年包，内含每月会员+15G视频定向流量；</p>
             <p>2、前3个月每月17元，后9个月每月22元；</p>
             <p>3、每月自动续订，连续订购12个月，订购期内不能退订；</p>
             <p class="enter tc">是否确认办理？</p>
@@ -154,8 +151,7 @@
     // 任我看跳转 monthSale
     $('h1 .logo').click(function () {
         console.log(11)
-        window.location.href =
-            'http://pcweb.mmarket.com/MobileAss/qrcode/openApp.html?param=776022e9b80c9fd4b9cff33673eb7e9ce84401edf5d960ec44c7f2d36f0e48c1f15d77f8602279b32249a490cd5a449a7c18af30a91639a5aeb61ef286371f93a6770d3ef6203646669694f83cdf308d18d11bcff79ef4b98643fca3acd72d90736d280b5db18a77881f589bb75c5160'
+        window.location.href = 'http://pcweb.mmarket.com/MobileAss/qrcode/openApp.html?param=776022e9b80c9fd4b9cff33673eb7e9ce84401edf5d960ec44c7f2d36f0e48c1f15d77f8602279b32249a490cd5a449a7c18af30a91639a5aeb61ef286371f93a6770d3ef6203646669694f83cdf308d18d11bcff79ef4b98643fca3acd72d90736d280b5db18a77881f589bb75c5160'
     })
     // 立即抢
     $('.part1 .btn').click(function () {
@@ -166,7 +162,7 @@
     // 年包立即抢
     $('.part2 .buy').click(function () {
         $('.pupop').show()
-        $('.year .manageText').html('您将办理' + this.getAttribute('data-name'))
+        $('.year .manageText').html('1、'+ this.getAttribute('data-name') +'会员权益年包，内含每月会员+15G视频定向流量；')
         $('.year').show()
     })
     // 取消
