@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/flexible.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- <link rel="stylesheet" href="./css/swiper.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="index">
+    <div class="count">
+        <p>201</p>
+        <span>我的流量币</span>
+    </div>
+    <div class="tab clearfix">
+        <span class="activity">兑流量包</span>
+        <span class="tips">会员特权</span>
+        <img src="./img/钻石.png" alt="">
+    </div>
+    <div class="package">
+        <p>全国通用流量/日包</p>
+        <ul data-typeText="通用流量日包">
+            <li class="activity">
+                <h3>1G</h3>
+                <span>10流量币</span>
+            </li>
+            <li>
+                <h3>5G</h3>
+                <span>50流量币</span>
+            </li>
+            <li>
+                <h3>10G</h3>
+                <span>100流量币</span>
+            </li>
+        </ul>
+        <p>头条定向流量/日包</p>
+        <ul data-typeText="头条定向流量日包">
+            <li>
+                <h3>3G</h3>
+                <span>10流量币</span>
+            </li>
+            <li>
+                <h3>6G</h3>
+                <span>20流量币</span>
+            </li>
+            <li>
+                <h3>12G</h3>
+                <span>40流量币</span>
+            </li>
+        </ul>
+        <div class="remain">
+            <div>
+                <p>当月还可兑换：100流量币</p>
+                <span>将兑换至号码：123****5678</span>
+            </div>
+            <div class="btn getPackage">立即兑换</div>
+        </div>
+    </div>
+    <ul class="vip">
+        <li>
+            <img src="./img/通话icon.png" alt="">
+            <div>
+                <p>10分钟通话</p>
+                <span>消耗20流量币</span>
+            </div>
+            <div class="btn vipbtn">去兑换</div>
+        </li>
+        <li>
+            <img src="./img/头条会员.png" alt="">
+            <div>
+                <p>15天头条超级会员</p>
+                <span>消耗30流量币</span>
+            </div>
+            <div class="btn vipbtn btnGot">已兑换</div>
+        </li>
+        <li>
+            <img src="./img/通话icon.png" alt="">
+            <div>
+                <p>话费充值券</p>
+                <span>消耗50流量币</span>
+            </div>
+            <div class="btn vipbtn">赚流量币</div>
+        </li>
+    </ul>
+    <footer>
+        <p>温馨提示：专属权益每月限兑换一次</p>
+        <span>更多兑换规则</span>
+    </footer>
+    <!-- 弹窗 -->
+    <div class="pupop">
+        <div class="result">
+            <img src="./img/close.png" alt="" class="close closeBtn">
+            <img class="img" src="./img/success.png" alt="">
+            <h4>兑换申请已提交</h4>
+            <p>流量生效以10086短信通知为准<br />
+                如兑换失败，流量币自动退回用户的会员账户</p>
+            <div class="btn closeBtn">我知道了</div>
+        </div>
+        <div class="state">
+            <img src="./img/close.png" alt="" class="close closeBtn">
+            <h4>兑换规则说明</h4>
+            <p>消费积分=月度话费账单消费金额（元）*星级系数。<br />
+                若您为三星级客户，且当月话费账单消费为100元，则其您当月可获得的消费积分为100（元）*2（三星客户星级系数）=200（积分）。<br />
+                注：在积分计算完成后，不足1积分的数值向上取整，积分按月生成并发放至您的积分账户，到帐后立即生效。 消费积分暂不清零，可持续累计。<br />
+                “月度话费账单消费金额”指您当月话费账单中实际缴费部分的金额，不包含参加活动等获赠的话费金额。<br />
+                在积分计算完成后，不足1积分的数值向上取整，积分按月生成并发放至您的积分账户，到帐后立即生效。 消费积分暂不清零，可持续累计。</p>
+        </div>
+        <div class="enter">
+            <h4>兑换确认</h4>
+            <p>您将为号码123****4567兑换1G<br />通用流量日包，是否兑换？</p>
+            <div class="btnGroup">
+                <span class="closeBtn">取消</span>
+                <span class="true">兑换</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/zepto.min.js"></script>
+<!-- <script src="./js/swiper.js"></script> -->
+<script>
+    // $(document).ready(function () {
+    //     var mySwiper = new Swiper('.swiper-container', {
+    //         // 如果需要分页器
+    //         pagination: {
+    //             el: '.swiper-pagination',
+    //         },
+    //     })
+    // })
+    // tab切换
+    $('.tab span').click(function () {
+        $('.tab span').removeClass('activity')
+        this.classList.add('activity')
+        if ($(this).index()) {
+            $('.vip').show()
+            $('.package').hide()
+        } else {
+            $('.vip').hide()
+            $('.package').show()
+        }
+    })
+    // 立即兑换按钮 1 
+    $('.package .getPackage').click(function () {
+        $('.pupop').show()
+        $('.enter').show()
+    })
+    // 点击各种流量包
+    $('.package li').click(function () {
+        $('.package li').removeClass('activity')
+        this.classList.add('activity')
+        console.log(this.parentElement.getAttribute('data-typeText'))
+        console.dir(this.children[0].innerText)
+        $('.enter p').html('您将为号码123****4567兑换' + this.children[0].innerText + '<br/>' + this.parentElement
+            .getAttribute('data-typeText') + '，是否兑换？')
+    })
+    // 确认兑换 2 
+    $('.btnGroup .true').click(function () {
+        $('.enter').hide()
+        // 兑换结果文案
+        const a = parseInt(Math.random() * 10)
+        if (a > 5) {
+            resultData('./img/gotgift.png', '兑换通知', '恭喜你，已兑换权益！')
+        } else {
+            resultData('./img/success.png', '兑换申请已提交', '流量券稍后会发送到您的卡券中，<br/>如兑换失败，流量币自动退回用户的会员账户')
+        }
+        $('.result').show()
+    })
+    // 兑换规则
+    $('footer span').click(function () {
+        $('.pupop').show()
+        $('.state').show()
+    })
+    // 关闭弹窗
+    $('.closeBtn').click(function () {
+        $('.pupop').hide()
+        $('.result').hide()
+        $('.state').hide()
+    })
+
+    // 兑换结果
+    function resultData(img, title, docs) {
+        $('.result .img').attr('src', img)
+        $('.result h4').html(title)
+        $('.result p').html(docs)
+    }
+    // 无法兑换
+    $('.btnGot').click(function () {
+        toast("非常抱歉，您无法兑换该权益")
+    })
+
+    function toast(mess) {
+        var str = '<div class="toast"><span></span></div>';
+        $("body").append(str);
+        $(".toast").find("span").html(mess);
+        setTimeout(function () {
+            $(".toast").hide()
+        }, 1000)
+    }
+</script>
