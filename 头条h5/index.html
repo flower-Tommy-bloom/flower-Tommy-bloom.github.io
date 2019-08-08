@@ -130,6 +130,10 @@
 </html>
 <script src="./js/zepto.min.js"></script>
 <script>
+    // console.log(window.screen.height,'111a')
+    // console.log('网页正文全文宽：',document.body.scrollWidth)
+    // $('body').css('height',window.screen.height)
+    // $('body').css('overflow-y','hidden')
     // tab切换
     $('.tab span').click(function () {
         $('.tab span').removeClass('activity')
@@ -146,13 +150,16 @@
     $('.package .getPackage').click(function () {
         $('.pupop').show()
         $('.enter').show()
+        // 禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
     })
     // 点击各种流量包
     $('.package li').click(function () {
         $('.package li').removeClass('activity')
         this.classList.add('activity')
-        console.log(this.parentElement.getAttribute('data-typeText'))
-        console.dir(this.children[0].innerText)
         $('.enter p').html('您将为号码123****4567兑换' + this.children[0].innerText + '<br/>' + this.parentElement
             .getAttribute('data-typeText') + '，是否兑换？')
     })
@@ -173,6 +180,11 @@
     $('footer span').click(function () {
         $('.pupop').show()
         $('.state').show()
+        // 禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
     })
     // 关闭弹窗
     $('.closeBtn').click(function () {
@@ -180,6 +192,12 @@
         $('.result').hide()
         $('.state').hide()
         $('.enter').hide()
+        // 放开禁止内容滚动
+        var top = -document.body.style.top.replace('px');
+        $('body').css({
+            position: 'static'
+        });
+        window.scrollTo(0, top);
     })
 
     // 兑换结果
@@ -187,10 +205,25 @@
         $('.result .img').attr('src', img)
         $('.result h4').html(title)
         $('.result p').html(docs)
+        // 禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
     }
-    // 无法兑换
-    $('.btnGot').click(function () {
-        toast("非常抱歉，您无法兑换该权益")
+    // 会员特权兑换
+    $('.vip .vipbtn').click(function () {
+        // toast("非常抱歉，您无法兑换该权益")
+        
+        // 测试代码开始 兑换结果文案
+        const a = parseInt(Math.random() * 10)
+        if (a > 4) {
+            $('.pupop').show()
+            resultData('./img/gotgift.png', '兑换通知', '恭喜你，已兑换权益！')
+            $('.result').show()
+        } else {
+            toast("非常抱歉，您无法兑换该权益")
+        }
     })
     // 提示的方法
     function toast(mess) {

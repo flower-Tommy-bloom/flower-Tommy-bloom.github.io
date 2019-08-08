@@ -239,7 +239,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 12;
 }
 .index .pupop .close {
   position: absolute;
@@ -288,8 +288,10 @@
   position: relative;
 }
 .index .pupop .result .img {
-  margin-top: 1.3333rem;
   display: inline-block;
+  width: 4.6667rem;
+  height: 3.36rem;
+  margin-top: 1.3333rem;
 }
 .index .pupop .state {
   display: none;
@@ -300,6 +302,7 @@
   border-radius: 0.16rem;
   overflow: hidden;
   position: relative;
+  z-index: 10;
 }
 .index .pupop .state .close {
   position: absolute;
