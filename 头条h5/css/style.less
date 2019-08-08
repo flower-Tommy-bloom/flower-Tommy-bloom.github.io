@@ -1,6 +1,5 @@
 .index {
     font-family: PingFangSC-Medium;
-    overflow-x: hidden;
     .btn {
         width: 3.0933rem;
         height: 1.0667rem;
@@ -23,7 +22,6 @@
         border:0.0267rem solid rgba(0,0,0,0.3)!important;
         color:#b3b3b3!important;
     }
-
     // 公共样式结束
     .count {
         width: 3.04rem;
@@ -51,11 +49,19 @@
         padding-bottom: 0.1333rem;
         border-bottom: 0.0133rem solid #ccc;
         position: relative;
-        img{
+        .img{
             position: absolute;
-            width:5.6533rem;
+            width:6rem;
+            height: 6rem;
             top: -3.2rem;
-            right: -1.3333rem;
+            right: 0;
+            overflow: hidden;
+            img{
+                position: absolute;
+                width:5.6533rem;
+                top: 0;
+                right: -1.3333rem;
+            }
         }
         span {
             float: left;
@@ -63,6 +69,7 @@
             font-family: PingFangSC-Regular;
             font-weight: 400;
             color: #a9a9a9;
+            z-index: 1;
             &:nth-child(1) {
                 margin: 0 0.7733rem 0 0.5333rem;
             }
@@ -155,7 +162,7 @@
             margin-top: 0.3733rem;
             display: flex;
             justify-content: space-between;
-            border-bottom: 0.0133rem solid #9b9b9b;
+            border-bottom: 0.0133rem solid #ccc;
             padding-bottom: 1.0133rem;
 
             >div {
@@ -163,7 +170,7 @@
                     margin-bottom: 0.32rem;
                     font-size: 0.4267rem;
                     font-family: PingFangSC-Medium;
-                    font-weight: 500;
+                    font-weight: 600;
                     color: rgba(0, 0, 0, 1);
                 }
 
@@ -254,7 +261,7 @@
             font-weight: 400;
             color: #9b9b9b;
             padding-bottom: 0.04rem;
-            border-bottom: 0.0267rem solid #9b9b9b;;
+            border-bottom: 0.0133rem solid #9b9b9b;;
         }
     }
     .pupop{
@@ -265,6 +272,7 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0,0,0,0.2);
+        z-index: 2;
         .close{
             position: absolute;
             width: 0.3733rem;
@@ -297,6 +305,9 @@
             height:1.0667rem;
             background:linear-gradient(130deg,rgba(239,95,53,1) 0%,rgba(216,50,24,1) 100%);
             border-radius:0.6rem;
+        }
+        > div {
+            z-index: 3;
         }
         .result{
             display: none;

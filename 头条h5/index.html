@@ -13,19 +13,20 @@
     <meta http-equiv="Cache" content="no-cache">
     <title>Document</title>
     <link rel="stylesheet" href="./css/base.css">
-    <!-- <link rel="stylesheet" href="./css/swiper.css"> -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="index">
     <div class="count">
-        <p>201</p>
+        <p>200</p>
         <span>我的流量币</span>
     </div>
     <div class="tab clearfix">
         <span class="activity">兑流量包</span>
         <span class="tips">会员特权</span>
-        <img src="./img/钻石.png" alt="">
+        <div class="img">
+            <img src="./img/钻石.png" alt="">
+        </div>
     </div>
     <div class="package">
         <p>全国通用流量/日包</p>
@@ -128,16 +129,7 @@
 
 </html>
 <script src="./js/zepto.min.js"></script>
-<!-- <script src="./js/swiper.js"></script> -->
 <script>
-    // $(document).ready(function () {
-    //     var mySwiper = new Swiper('.swiper-container', {
-    //         // 如果需要分页器
-    //         pagination: {
-    //             el: '.swiper-pagination',
-    //         },
-    //     })
-    // })
     // tab切换
     $('.tab span').click(function () {
         $('.tab span').removeClass('activity')
@@ -167,13 +159,14 @@
     // 确认兑换 2 
     $('.btnGroup .true').click(function () {
         $('.enter').hide()
-        // 兑换结果文案
+        // 测试代码开始 兑换结果文案
         const a = parseInt(Math.random() * 10)
         if (a > 5) {
             resultData('./img/gotgift.png', '兑换通知', '恭喜你，已兑换权益！')
         } else {
             resultData('./img/success.png', '兑换申请已提交', '流量券稍后会发送到您的卡券中，<br/>如兑换失败，流量币自动退回用户的会员账户')
         }
+        // 测试代码结束
         $('.result').show()
     })
     // 兑换规则
@@ -186,6 +179,7 @@
         $('.pupop').hide()
         $('.result').hide()
         $('.state').hide()
+        $('.enter').hide()
     })
 
     // 兑换结果
@@ -198,7 +192,7 @@
     $('.btnGot').click(function () {
         toast("非常抱歉，您无法兑换该权益")
     })
-
+    // 提示的方法
     function toast(mess) {
         var str = '<div class="toast"><span></span></div>';
         $("body").append(str);
