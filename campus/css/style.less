@@ -1,0 +1,107 @@
+
+
+body {
+    background-color: #f5f7fa;
+}
+// 顶部轮播图
+.topBg {
+    padding-top: 1.4rem;
+    background: url('./../img/校园版权益bg.png') no-repeat;
+    background-size: 100%;
+    height: 4.2rem;
+
+    .swiper-container {
+        width: 8.8rem;
+    }
+
+    .swiper-slide-active {
+        z-index: 10;
+    }
+
+    .swiper-slide:not(.swiper-slide-active) {
+        transform: scale(0.8);
+    }
+
+    img {
+        width: 3.8667rem;
+    }
+    .swiper-slide-prev{
+        transform: scale(0.8) translateX(2.1rem)!important;
+    }
+    .swiper-slide-next{
+        transform: scale(0.8) translateX(-2.1rem)!important;
+    }
+    // 分页的样式
+    .pagination {
+        .swiper-pagination {
+            position: static;
+        }
+
+        span {
+            width: 0.5333rem;
+            height: 0.08rem;
+            background-color: #007efc;
+            border-radius: 0;
+            margin: .3rem 0.0533rem;
+        }
+    }
+}
+
+
+
+.ali,.kuaishou,.jd{
+    display: none;
+    padding: .2rem 0.4667rem 3.5733rem;
+    >img {
+        width: 9.08rem;
+    }
+    .docs {
+        margin-bottom: 0.2667rem;
+    
+        >p {
+            padding: 0 0.0667rem;
+            font-size: 0.32rem;
+            font-family: AlibabaPuHuiTiR;
+            color: rgba(57, 62, 70, 1);
+            line-height: 0.64rem;
+        }
+    }
+}
+// 底部悬浮按钮
+.btn {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+
+    .normal {
+        width: 3.8rem;
+        height: 1.56rem;
+    }
+
+    .take {
+        width: 5.4267rem;
+        height: 1.56rem;
+    }
+    .tips{
+        position: absolute;
+        top: -1.5rem;
+        left: .4rem;
+        width: 5.8667rem;
+        height: 1.52rem;
+        img{
+            width: 100%;
+        }
+        .close{
+            position: absolute;
+            top: -.1rem;
+            right: -.1rem;
+            width: 0.2667rem;
+            height: 0.2667rem;
+            box-sizing: content-box;
+            padding: .2rem;
+        }
+    }
+}
