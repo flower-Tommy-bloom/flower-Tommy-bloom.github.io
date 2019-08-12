@@ -86,24 +86,25 @@
     var mySwiper = new Swiper('.swiper-container', {
         loop: true,
         centeredSlides: true,
-        slidesPerView: 2,
         initialSlide: 1,
-        slidesOffsetBefore: 10,
+        slidesPerView: 3,
+        slidesPerGroup : 1,
+        slidesOffsetBefore: -16,
         pagination: {
             el: '.swiper-pagination',
         },
         on: {
             slideChangeTransitionEnd: function (event) {
                 console.log(this.activeIndex)
-                if(this.activeIndex === 3){
+                if(this.activeIndex === 4){
                     $('.jd').hide()
                     $('.kuaishou').hide()
                     $('.ali').show()
-                }else if(this.activeIndex === 2 || this.activeIndex === 5){
+                }else if(this.activeIndex === 3 || this.activeIndex === 6){
                     $('.kuaishou').hide()
                     $('.ali').hide()
                     $('.jd').show()
-                }else if(this.activeIndex === 1 || this.activeIndex === 4){
+                }else if(this.activeIndex === 2 || this.activeIndex === 5){
                     $('.jd').hide()
                     $('.ali').hide()
                     $('.kuaishou').show()
