@@ -10,12 +10,6 @@ body {
 .topBg .swiper-container {
   width: 8.8rem;
 }
-.topBg .swiper-slide-active {
-  z-index: 10;
-}
-.topBg .swiper-slide:not(.swiper-slide-active) {
-  transform: scale(0.7);
-}
 .topBg img {
   width: 3.8667rem;
 }

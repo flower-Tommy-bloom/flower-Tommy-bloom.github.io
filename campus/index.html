@@ -84,27 +84,34 @@
 <script src="./js/swiper.js"></script>
 <script>
     var mySwiper = new Swiper('.swiper-container', {
-        loop: true,
-        centeredSlides: true,
-        initialSlide: 1,
-        slidesPerView: 3,
-        slidesPerGroup : 1,
-        slidesOffsetBefore: -16,
+        loop: true, // 循环的
+        loopAdditionalSlides: 3, // 前后复制若干个slide
+        effect: 'coverflow', // 切换效果
+        slidesPerView: 2,  // 显示个数
+        centeredSlides: true, // 中间
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 20,
+            depth: 60,
+            modifier: 5,
+            slideShadows: false,
+        },
+        slidesOffsetBefore : 36,
         pagination: {
             el: '.swiper-pagination',
         },
         on: {
             slideChangeTransitionEnd: function (event) {
                 console.log(this.activeIndex)
-                if(this.activeIndex === 4){
+                if (this.activeIndex === 4) {
                     $('.jd').hide()
                     $('.kuaishou').hide()
                     $('.ali').show()
-                }else if(this.activeIndex === 3 || this.activeIndex === 6){
+                } else if (this.activeIndex === 3 || this.activeIndex === 6) {
                     $('.kuaishou').hide()
                     $('.ali').hide()
                     $('.jd').show()
-                }else if(this.activeIndex === 2 || this.activeIndex === 5){
+                } else if (this.activeIndex === 2 || this.activeIndex === 5) {
                     $('.jd').hide()
                     $('.ali').hide()
                     $('.kuaishou').show()
