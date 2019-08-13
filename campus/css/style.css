@@ -11,12 +11,7 @@ body {
   width: 8.8rem;
 }
 .topBg img {
-  width: 3.8667rem;
-}
-.topBg .swiper-slide-duplicate-prev,
-.topBg .swiper-slide-duplicate-next,
-.topBg .swiper-slide-duplicate-active {
-  visibility: hidden;
+  width: 3.7334rem;
 }
 .topBg .pagination .swiper-pagination {
   position: static;
