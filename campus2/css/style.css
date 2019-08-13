@@ -13,6 +13,13 @@ body {
 .topBg img {
   width: 3.7334rem;
 }
+.topBg .swiper-slide-duplicate-prev,
+.topBg .swiper-slide-duplicate-next {
+  visibility: hidden;
+}
+.topBg .swiper-slide-duplicate-active {
+  visibility: hidden;
+}
 .topBg .pagination .swiper-pagination {
   position: static;
 }
