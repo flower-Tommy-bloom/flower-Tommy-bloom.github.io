@@ -33,8 +33,7 @@ body {
 .ali,
 .kuaishou,
 .jd {
-  display: none;
-  padding: .2rem 0.4667rem 3.5733rem;
+  padding: .2rem 0.4667rem 3.1733rem;
 }
 .ali > img,
 .kuaishou > img,
@@ -75,8 +74,8 @@ body {
 }
 .btn .tips {
   position: absolute;
-  top: -1.5rem;
-  left: .4rem;
+  top: -0.9rem;
+  left: .3rem;
   width: 5.8667rem;
   height: 1.52rem;
 }

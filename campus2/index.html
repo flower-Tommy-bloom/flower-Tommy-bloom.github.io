@@ -31,19 +31,11 @@
         </div>
     </div>
     <div class="ali">
-        <img class="day" src="./img/天天有礼-ali.png" alt="">
+        <img class="day" src="./img/有礼区.png" alt="">
         <div class="docs">
             <p>权益活动规则</p>
-            <p>1、整个模块中的全部权益每天用户可选择领取一张</p>
-            <p>2、每张券50000张</p>
-            <p>3、生活礼包活动截止到12月31日</p>
-        </div>
-        <img class="month" src="./img/月月有礼-ali.png" alt="">
-        <div class="docs">
-
-            <p>权益活动规则</p>
-            <p>1、每张券每个月限领一次；</p>
-            <p>2、每张券50000张</p>
+            <p>1、天天有礼券的全部权益每天用户可选择领取一张，月月有礼每张券每个月限领一次；</p>
+            <p>2、每张券50000张/天；</p>
             <p>3、生活礼包活动截止到12月31日；</p>
             <p>4、如您不是校园用户，则不可享受学生专属权益内容。其中校园用户身份由各类互联网权益公司判定。互联网权益公司可根据权益合作情况进行权益内容增减。</p>
         </div>
@@ -69,6 +61,7 @@
             <p>3、如您不是校园用户，则不可享受学生专属权益内容。其中校园用户身份由各类互联网权益公司判定。互联网权益公司可根据权益合作情况进行权益内容增减。</p>
         </div>
     </div>
+
     <div class="btn">
         <img class="normal" src="./img/通用权益按钮.png" alt="">
         <img class="take" src="./img/领取按钮.png" alt="">
@@ -102,8 +95,8 @@
         },
         on: {
             transitionEnd: function (event) {
-                console.log(this.activeIndex,'activeIndex')
-                if (this.activeIndex === 4) {
+                console.log(this.activeIndex, 'activeIndex')
+                if (this.activeIndex === 4 || this.activeIndex === 7) {
                     $('.jd').hide()
                     $('.kuaishou').hide()
                     $('.ali').show()
