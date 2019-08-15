@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="service">
+    <div class="notice">
+        <span>公告</span>
+        <p>公告公告公告公告公告公告公告</p>
+    </div>
+    <div class="tab">
+        <!-- <img src="./img/flower_bg.png" alt=""> -->
+        <span class="left">移动花卡花呗版</span>
+        <span class="right">移动花卡宝藏版</span>
+        <!-- <img src="/img/baozang_bg.png" alt=""> -->
+    </div>
+    <div class="search">
+        <h3>常见问题</h3>
+        <div class="searchBtn">
+            <img src="./img/search_icon.png" alt="">
+            <span>搜索</span>
+        </div>
+    </div>
+    <div class="tips">
+        <ul>
+            <li class="active">热点问题</li>
+            <li>办卡问题</li>
+            <li>权益问题</li>
+            <li>订单问题</li>
+            <li>资费问题</li>
+        </ul>
+    </div>
+    <div class="question">
+        <ul>
+            <li>
+                <article>
+                    <span>1.移动花卡月租费是多少?</span>
+                    <img src="./img/arrows-down.png" alt="">
+                </article>
+                <section>我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案</section>
+            </li>
+            <li>
+                <article>
+                    <span>1.移动花卡月租费是多少?</span>
+                    <img src="./img/arrows-down.png" alt="">
+                </article>
+                <section>我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案</section>
+            </li>
+        </ul>
+    </div>
+    <div class="serverEntryBtn">
+        <span>在线客服</span>
+        <img src="./img/server_mm.png" alt="" class="service">
+    </div>
+    <div class="pupop">
+        <!-- 关联手机 -->
+        <div class="linkPhone">
+            <div class="title">温馨提示</div>
+            <p>
+                请关联您的手机号码<br />
+                获得更好的服务哦
+            </p>
+            <div class="btnGroup">
+                <span class="close">我偏偏不要</span>
+                <span>马上关联</span>
+            </div>
+        </div>
+        <!-- 城市定位 -->
+        <div class="cityList">
+            <h2>城市定位</h2>
+            <div class="list">
+                <section>
+                    <h3>A-G</h3>
+                    <ul class="clearfix">
+                        <li class="active">北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>A-G</h3>
+                    <ul class="clearfix">
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>A-G</h3>
+                    <ul class="clearfix">
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                        <li>北京</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="btnGroup">
+                <span class="close">取消</span>
+                <span>确定</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script src="./js/fn.js"></script>
+<script>
+    // 公告页跳转
+    $('.notice').click(function () {
+        window.location.href = './pages/notice.html'
+    })
+    // 常见问题 切换
+    $('.tips').on('click', 'li', function () {
+        $(this).parent().children().removeClass('active')
+        $(this).addClass('active')
+    })
+    // 城市定位选择
+    $('.cityList li').click(function () {
+        $('.cityList .list').find('li').removeClass('active')
+        $(this).addClass('active')
+    })
+    // 展开问题
+    $('.question ul').on('click', 'article', function () {
+        if ($(this).parent().children('section').hasClass('active')) {
+            accordion_end(this)
+        } else {
+            $(this).parent().children('section').addClass('active')
+            accordion_start(this)
+        }
+
+    })
+    // 绑定花卡
+    $('.tab .left').click(function(){
+        window.location.href = './pages/relevance.html'
+    })
+    // 联系客服
+    $('.serverEntryBtn').click(function () {
+        $('.pupop').show()
+        // 关联手机
+        // $('.linkPhone').show()
+
+        // 城市定位
+        // $('.cityList').show()
+
+        // 测试代码
+        if (parseInt(Math.random() * 10) > 4) {
+            $('.linkPhone').show()
+        } else {
+            $('.cityList').show()
+        }
+        // 禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
+    })
+    // 跳转到搜索
+    $('.searchBtn span').click(function(){
+        window.location.href = './pages/search.html'
+    })
+    // 关闭弹窗
+    $('.close').click(function () {
+        closePupop()
+    })
+    // 关闭弹窗的方法
+    function closePupop() {
+        $('.pupop').hide()
+        $('.linkPhone').hide()
+        $('.cityList').hide()
+        // 放开禁止内容滚动
+        var top = -document.body.style.top.replace('px')
+        $('body').css({
+            position: 'static'
+        })
+        window.scrollTo(0, top)
+    }
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>search</title>
+    <link rel="stylesheet" href="./../css/base.css">
+    <link rel="stylesheet" href="./../css/style.css">
+</head>
+
+<body id="search">
+    <header>
+        <img src="./../img/search_icon.png" alt="">
+        <span>搜索</span>
+        <input type="text" id="input">
+    </header>
+    <div class="history">
+        <ul class="clearfix">
+            <li>免流包</li>
+            <li>免量</li>
+            <li>免流量</li>
+            <li>免流</li>
+            <li>免流量流</li>
+        </ul>
+    </div>
+    <div class="question">
+        <ul>
+            <li>
+                <article>
+                    <span>1.移动花卡月租费免流包是多少?</span>
+                    <img src="./../img/arrows-down.png" alt="">
+                </article>
+                <section>我是文免流包我是文案我是文免流包我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案</section>
+            </li>
+            <li>
+                <article>
+                    <span>1.移动花卡月租费是多少?</span>
+                    <img src="./../img/arrows-down.png" alt="">
+                </article>
+                <section>我是文案免流包我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案</section>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script src="./../js/rem.js"></script>
+<script src="./../js/zepto.min.js"></script>
+<!-- 问题列表 -- 手风琴动画 -->
+<script src="./../js/fn.js"></script>
+<script>
+    var formerText
+    // 常见问题 切换
+    $('.history').on('click', 'li', function () {
+        $(this).parent().children().removeClass('active')
+        $(this).addClass('active')
+        $('.question').show()
+        // 文字变色
+        var text = $(this).html()
+        formerText = $('.question').html()
+        var newText = formerText.replace(/免流包/g, '<span style="color:#00A5FF">' + text + '</span>')
+        $('.question').html(newText)
+    })
+    // 展开问题
+    $('.question').on('click', 'article', function () {
+        if ($(this).parent().children('section').hasClass('active')) {
+            accordion_end(this)
+        } else {
+            $(this).parent().children('section').addClass('active')
+            accordion_start(this)
+        }
+
+    })
+    $('#input').blur(function (e) {
+        if (e.target.value) {
+            $('.history').hide()
+            $('.question').show()
+            $('.question li').eq(0).css('border-top', 'none')
+        } else {
+            $('.history').show()
+            $('.question li').eq(0).css('border-top', '0.01rem solid #cbcbcb')
+        }
+    })
+</script>
