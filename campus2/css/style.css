@@ -2,16 +2,16 @@ body {
   background-color: #f5f7fa;
 }
 .topBg {
-  padding-top: 1.4rem;
+  padding-top: 1.162rem;
   background: url('../img/校园版权益bg.png') no-repeat;
   background-size: 100%;
-  height: 4.2rem;
+  height: 3.486rem;
 }
 .topBg .swiper-container {
-  width: 8.8rem;
+  width: 7.304rem;
 }
 .topBg img {
-  width: 3.7334rem;
+  width: 3.0987rem;
 }
 .topBg .swiper-slide-duplicate-prev,
 .topBg .swiper-slide-duplicate-next {
@@ -22,71 +22,78 @@ body {
 }
 .topBg .pagination .swiper-pagination {
   position: static;
+  transform: translate3d(0, -0.3rem, 0);
 }
 .topBg .pagination span {
-  width: 0.5333rem;
-  height: 0.08rem;
+  width: 0.4rem;
+  height: 0.06rem;
   background-color: #007efc;
   border-radius: 0;
-  margin: .3rem 0.0533rem;
+  margin: 0.3rem 0.05rem;
 }
 .ali,
 .kuaishou,
 .jd {
-  padding: .2rem 0.4667rem 3.1733rem;
+  box-sizing: border-box;
+  padding: 0.166rem 0.34rem 1.8rem;
 }
 .ali > img,
 .kuaishou > img,
 .jd > img {
-  width: 9.08rem;
+  width: 6.8rem;
 }
 .ali .docs,
 .kuaishou .docs,
 .jd .docs {
-  margin-bottom: 0.2667rem;
+  margin-bottom: 0.2214rem;
 }
 .ali .docs > p,
 .kuaishou .docs > p,
 .jd .docs > p {
-  padding: 0 0.0667rem;
-  font-size: 0.32rem;
+  padding: 0 0.0554rem;
+  font-size: 0.2656rem;
   font-family: AlibabaPuHuiTiR;
   color: #393e46;
-  line-height: 0.64rem;
+  line-height: 0.5312rem;
+}
+.swiper-main {
+  transition-property: height;
+  transition-duration: .3s;
 }
 .btn {
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding-top: .2rem;
+  padding-top: 0.166rem;
   background-color: #f5f7fa;
   display: flex;
+  z-index: 10;
   justify-content: space-between;
 }
 .btn .normal {
-  width: 3.8rem;
-  height: 1.56rem;
+  width: 2.854rem;
+  height: 1.2rem;
 }
 .btn .take {
-  width: 5.4267rem;
-  height: 1.56rem;
+  width: 4.2042rem;
+  height: 1.2rem;
 }
 .btn .tips {
   position: absolute;
-  top: -0.9rem;
-  left: .3rem;
-  width: 4.9rem;
+  top: -0.64rem;
+  left: 0.249rem;
+  width: 4.067rem;
 }
 .btn .tips img {
   width: 100%;
 }
 .btn .tips .close {
   position: absolute;
-  top: 0.05rem;
+  top: 0.0415rem;
   right: 0rem;
-  width: 0.21rem;
-  height: 0.21rem;
+  width: 0.1743rem;
+  height: 0.1743rem;
   box-sizing: content-box;
-  padding: .2rem;
+  padding: 0.166rem;
 }
