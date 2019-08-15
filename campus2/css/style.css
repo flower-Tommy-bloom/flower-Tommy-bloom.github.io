@@ -76,18 +76,17 @@ body {
   position: absolute;
   top: -0.9rem;
   left: .3rem;
-  width: 5.8667rem;
-  height: 1.52rem;
+  width: 4.9rem;
 }
 .btn .tips img {
   width: 100%;
 }
 .btn .tips .close {
   position: absolute;
-  top: -0.1rem;
-  right: -0.1rem;
-  width: 0.2667rem;
-  height: 0.2667rem;
+  top: 0.05rem;
+  right: 0rem;
+  width: 0.21rem;
+  height: 0.21rem;
   box-sizing: content-box;
   padding: .2rem;
 }
