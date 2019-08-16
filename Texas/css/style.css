@@ -52,7 +52,6 @@
 #index .list ul li,
 #index .singleList ul li {
   margin-right: 1%;
-  width: 3.5rem;
   width: 49%;
 }
 #index .list ul li:nth-child(2n),
@@ -62,7 +61,6 @@
 #index .list ul li .top,
 #index .singleList ul li .top {
   position: relative;
-  height: 2.62rem;
   border: solid 0.02rem #f6b37f;
 }
 #index .list ul li .top img,
@@ -157,9 +155,6 @@
 #index #singleList li {
   width: 95%;
   margin: 0 auto;
-}
-#index #singleList li .top {
-  height: 5.07rem;
 }
 #index #singleList li .top img {
   width: 100%;
