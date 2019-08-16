@@ -195,23 +195,25 @@
 
         $('.list ul').append(html).append(html)
     })
-    
+
 
     $('.search img').click(function () {
         $('.list').hide()
         // 找到的列表
         // $('.singleList').show()
-
         // 没有找到
         // $('.empty').show()
-
+        if(!window.test1){
+            window.test1 = 1
+        }
         // 测试代码
         $('.singleList').hide()
         $('.empty').hide()
-        if (parseInt(Math.random() * 10) > 4) {
+        if(window.test1++ % 2 == 0){
             $('.singleList').show()
-        } else {
+        }else{
             $('.empty').show()
         }
     })
+
 </script>

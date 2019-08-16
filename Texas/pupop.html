@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="index">
+    <ul style="margin-top: 1rem">
+        <li style="height: 1rem;line-height: 1rem;">二次确认</li>
+        <li style="height: 1rem;line-height: 1rem;">确认开通</li>
+        <li style="height: 1rem;line-height: 1rem;">成功</li>
+        <li style="height: 1rem;line-height: 1rem;">失败</li>
+    </ul>
+    <div class="pupop">
+        <!-- 二次确认 -->
+        <div class="tips">
+            <img class="close" src="./img/close.png" alt="">
+            <p>确认设置此视频为<br />
+                <span>18813331444</span>的彩铃吗？</p>
+            <div class="enterBtn">确认</div>
+        </div>
+        <!-- 确认开通 -->
+        <div class="submit">
+            <img class="close" src="./img/close.png" alt="">
+            <p>亲，你需要先开通视频彩铃功能，<br />
+                （每月6元，首月赠送6元话费），<br />
+                才可设置为自己的彩铃哟！</p>
+            <!-- <div class="enterBtn">设为彩铃</div> -->
+            <div class="btnGroup">
+                <span class="close">在想想</span>
+                <span>立即开通</span>
+            </div>
+        </div>
+        <!-- 成功 -->
+        <div class="success">
+            <img class="close" src="./img/close.png" alt="">
+            <p>恭喜，视频彩铃设置成功</p>
+            <div class="enterBtn">确认</div>
+        </div>
+        <!-- 失败 -->
+        <div class="fail">
+            <img class="close" src="./img/close.png" alt="">
+            <p>啊哦~系统开小差了，请稍后再试</p>
+            <div class="enterBtn">确认</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script>
+    $('li').eq(0).click(function () {
+        $('.pupop').show()
+        $('.tips').show()
+        // 弹窗禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
+    })
+    $('li').eq(1).click(function () {
+        $('.pupop').show()
+        $('.submit').show()
+        // 弹窗禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
+    })
+    $('li').eq(2).click(function () {
+        $('.pupop').show()
+        $('.success').show()
+        // 弹窗禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
+    })
+    $('li').eq(3).click(function () {
+        $('.pupop').show()
+        $('.fail').show()
+        // 弹窗禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
+    })
+
+
+    $('.close').click(function closeFn() {
+        $('.pupop').hide()
+        $('.pupop > div').hide()
+        // 放开弹窗禁止内容滚动
+        var top = -document.body.style.top.replace('px');
+        $('body').css({
+            position: 'static'
+        });
+        // window.scrollTo(0, top);
+    })
+</script>

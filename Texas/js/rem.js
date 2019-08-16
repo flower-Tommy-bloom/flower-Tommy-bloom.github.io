@@ -1,16 +1,12 @@
-(function (win, designW) {
+(function (win, designW = 750) { // 设计稿默认为 750px,根据实际设计稿大小对应设置
 	var doc = win.document;
 	var docEle = doc.documentElement;
-	designW = designW || 750; //设计稿宽度px,默认640px设计稿
-	var ratio = designW / 100; //640px=> 1rem = 100px, 超出640px font-size：100px;
+	var ratio = designW / 100;
 	var or = "orientationchange" in win ? "orientationchange" : "resize";
 	//创建viewport	
 	_createViewport();
+	// 设置rem
 	_refreshRem();
-	if (doc.addEventListener) {
-		win.addEventListener(or, _refreshRem, false);
-		doc.addEventListener("DOMContentLoaded", _refreshRem, false);
-	}
 	/**
 	 * 创建viewport
 	 */
@@ -26,15 +22,14 @@
 	 * 动态更新rem
 	 */
 	function _refreshRem() {
-		// var clientW = docEle.clientWidth || 320;
-		var clientW = doc.body.clientWidth
+		var clientW = docEle.clientWidth || 320;
 		//设置最大和最小宽度取值
 		if (clientW > designW) {
-			clientW = designW
+			// clientW = designW
 		} else if (clientW < 320) {
 			clientW = 320;
 		}
 		docEle.style.fontSize = clientW / ratio + "px";
 		console.log('clientW:',clientW,'fontSize:' + docEle.style.fontSize);
 	};
-})(window, 750); //750为设计稿宽度px值,根据实际设计稿大小对应设置
+})(window);

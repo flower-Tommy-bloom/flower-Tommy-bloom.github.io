@@ -1,17 +1,17 @@
-#index {
+body {
   font-family: FZLTHJW--GB1-0;
   font-size: 0.24rem;
   letter-spacing: 0.01rem;
 }
-#index header {
+header {
   width: 100%;
   height: 3.75rem;
 }
-#index header img {
+header img {
   width: 100%;
   height: 100%;
 }
-#index .search {
+.search {
   position: relative;
   width: 5.5rem;
   height: 0.64rem;
@@ -20,7 +20,7 @@
   border-radius: 0.32rem;
   border: solid 0.02rem #f6b37f;
 }
-#index .search img {
+.search img {
   position: absolute;
   top: 50%;
   right: 0.2rem;
@@ -28,7 +28,7 @@
   width: 0.33rem;
   height: 0.33rem;
 }
-#index .search input {
+.search input {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,46 +42,46 @@
   line-height: 0.45rem;
   letter-spacing: 0rem;
 }
-#index .list ul,
-#index .singleList ul {
+.list ul,
+.singleList ul {
   margin: 0 0.18rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#index .list ul li,
-#index .singleList ul li {
+.list ul li,
+.singleList ul li {
   margin-right: 1%;
   width: 49%;
 }
-#index .list ul li:nth-child(2n),
-#index .singleList ul li:nth-child(2n) {
+.list ul li:nth-child(2n),
+.singleList ul li:nth-child(2n) {
   margin-right: 0;
 }
-#index .list ul li .top,
-#index .singleList ul li .top {
+.list ul li .top,
+.singleList ul li .top {
   position: relative;
   border: solid 0.02rem #f6b37f;
 }
-#index .list ul li .top img,
-#index .singleList ul li .top img {
+.list ul li .top img,
+.singleList ul li .top img {
   width: 100%;
   height: 100%;
 }
-#index .list ul li .top .corner,
-#index .singleList ul li .top .corner {
+.list ul li .top .corner,
+.singleList ul li .top .corner {
   position: absolute;
   top: -0.05rem;
   left: -0.05rem;
   width: 0.76rem;
   height: 0.76rem;
 }
-#index .list ul li .top .corner img,
-#index .singleList ul li .top .corner img {
+.list ul li .top .corner img,
+.singleList ul li .top .corner img {
   width: 100%;
 }
-#index .list ul li .top .corner p,
-#index .singleList ul li .top .corner p {
+.list ul li .top .corner p,
+.singleList ul li .top .corner p {
   position: absolute;
   transform: rotateZ(-45deg);
   display: block;
@@ -93,12 +93,12 @@
   align-items: center;
   justify-content: center;
 }
-#index .list ul li .top .corner p span,
-#index .singleList ul li .top .corner p span {
+.list ul li .top .corner p span,
+.singleList ul li .top .corner p span {
   font-size: 0.2rem;
 }
-#index .list ul li .top > p,
-#index .singleList ul li .top > p {
+.list ul li .top > p,
+.singleList ul li .top > p {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -115,20 +115,20 @@
   white-space: nowrap;
   /*规定段落中的文本不进行换行 */
 }
-#index .list ul li .down,
-#index .singleList ul li .down {
+.list ul li .down,
+.singleList ul li .down {
   margin: 0.16rem 0 0.38rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#index .list ul li .down p,
-#index .singleList ul li .down p {
+.list ul li .down p,
+.singleList ul li .down p {
   line-height: 0.3rem;
   color: #4d4c4c;
 }
-#index .list ul li .down em,
-#index .singleList ul li .down em {
+.list ul li .down em,
+.singleList ul li .down em {
   display: block;
   width: 1.28rem;
   height: 0.42rem;
@@ -138,8 +138,8 @@
   border-radius: 0.2rem;
   color: #ffffff;
 }
-#index .list .btn,
-#index .singleList .btn {
+.list .btn,
+.singleList .btn {
   width: 100%;
   padding: 0.15rem 0 0;
   padding-bottom: .64rem;
@@ -149,41 +149,41 @@
   letter-spacing: 0rem;
   color: #656363;
 }
-#index #singleList {
+#singleList {
   display: none;
 }
-#index #singleList li {
-  width: 95%;
+#singleList li {
+  width: 96%;
   margin: 0 auto;
 }
-#index #singleList li .top img {
+#singleList li .top img {
   width: 100%;
 }
-#index #singleList li .top .corner {
+#singleList li .top .corner {
   width: 1.47rem;
   height: 1.47rem;
 }
-#index #singleList li .top .corner p {
+#singleList li .top .corner p {
   top: 0.2rem;
   left: 0.14rem;
   font-size: 0.24rem;
 }
-#index #singleList li .top .corner p span {
+#singleList li .top .corner p span {
   font-size: 0.36rem;
   padding-bottom: 0.06rem;
 }
-#index #singleList li .top > p {
+#singleList li .top > p {
   height: 0.77rem;
+  line-height: 0.77rem;
   font-size: 0.36rem;
   padding-left: 0.27rem;
-  line-height: 0.77rem;
   color: #ffffff;
 }
-#index #singleList li .down {
+#singleList li .down {
   margin-bottom: 0;
   padding-bottom: .38rem;
 }
-#index #singleList li .down em {
+#singleList li .down em {
   width: 5.37rem;
   height: 0.8rem;
   margin: 0 auto;
@@ -192,7 +192,7 @@
   border-radius: 0.4rem;
   font-size: 0.36rem;
 }
-#index .pupop {
+.pupop {
   display: none;
   position: fixed;
   top: 0;
@@ -201,9 +201,9 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
-#index .pupop .enter {
+.pupop > div {
+  display: none;
   width: 5.89rem;
-  height: 3.92rem;
   margin: 5.51rem auto 0;
   background-color: #ffffff;
   border-radius: 0.2rem;
@@ -211,24 +211,24 @@
   overflow: hidden;
   position: relative;
 }
-#index .pupop .enter img {
+.pupop > div img {
   position: absolute;
-  top: 0.1rem;
-  right: 0.1rem;
+  top: 0.18rem;
+  right: 0.18rem;
   width: 0.46rem;
   height: 0.46rem;
 }
-#index .pupop .enter p {
+.pupop > div p {
   width: 4.8rem;
   margin: 0.8rem auto .54rem;
   text-align: center;
   font-size: 0.28rem;
   line-height: 0.36rem;
 }
-#index .pupop .enter .enterBtn {
+.pupop > div .enterBtn {
   width: 3.15rem;
   height: 0.8rem;
-  margin: 0 auto;
+  margin: 0 auto .6rem;
   background-image: linear-gradient(0deg, #c10f0f 0%, #f55c5d 100%);
   border-radius: 0.4rem;
   text-align: center;
@@ -236,12 +236,32 @@
   font-size: 0.36rem;
   color: #ffffff;
 }
-#index .empty {
+.pupop > div .btnGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .5rem .6rem;
+}
+.pupop > div .btnGroup span {
+  width: 2.2rem;
+  background-image: linear-gradient(0deg, #c10f0f 0%, #f55c5d 100%);
+  border-radius: 0.4rem;
+  text-align: center;
+  line-height: 0.8rem;
+  font-size: 0.36rem;
+  color: #ffffff;
+}
+.pupop > div .btnGroup span:nth-child(1) {
+  background-image: none;
+  color: #f55c5d;
+  border: 0.02rem solid #f55c5d;
+}
+.empty {
   display: none;
   margin-top: 1.5rem;
   text-align: center;
 }
-#index .empty img {
+.empty img {
   display: inline-block;
   width: 1.8rem;
 }
