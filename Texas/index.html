@@ -37,10 +37,7 @@
                     </p>
                 </div>
                 <div class="down">
-                    <p>
-                        设置量：
-                        <span>12458</span>
-                    </p>
+                    <p>设置量：<span>1299458</span></p>
                     <em>设为彩铃</em>
                 </div>
             </li>
@@ -52,14 +49,11 @@
                         <p>Top<span>2</span></p>
                     </div>
                     <p>
-                        作品名称最火彩铃都在下
+                        作品名称最火彩铃都在下品名称最火彩铃都在下品名称最火彩铃都在下
                     </p>
                 </div>
                 <div class="down">
-                    <p>
-                        设置量：
-                        <span>123</span>
-                    </p>
+                    <p>设置量：<span>1299458</span></p>
                     <em>设为彩铃</em>
                 </div>
             </li>
@@ -75,10 +69,7 @@
                     </p>
                 </div>
                 <div class="down">
-                    <p>
-                        设置量：
-                        <span>123</span>
-                    </p>
+                    <p>设置量：<span>1299458</span></p>
                     <em>设为彩铃</em>
                 </div>
             </li>
@@ -94,10 +85,7 @@
                     </p>
                 </div>
                 <div class="down">
-                    <p>
-                        设置量：
-                        <span>123</span>
-                    </p>
+                    <p>设置量：<span>1299458</span></p>
                     <em>设为彩铃</em>
                 </div>
             </li>
@@ -140,12 +128,31 @@
             </li>
         </ul>
     </div>
+    <div class="empty">
+        <img src="./img/notFind.png" alt="">
+    </div>
+    <div class="pupop">
+        <!-- 二次确认 -->
+        <div class="enter">
+            <img class="close" src="./img/close.png" alt="">
+            <p>亲，你需要先开通视频彩铃功能，<br />
+                （每月6元，首月赠送6元话费），<br />
+                才可设置为自己的彩铃哟！</p>
+            <div class="enterBtn">设为彩铃</div>
+        </div>
+    </div>
 </body>
 
 </html>
 <script src="./js/rem.js"></script>
 <script src="./js/zepto.min.js"></script>
 <script>
+    $('em').click(function () {
+        $('.pupop').show()
+    })
+    $('.close').click(function () {
+        $('.pupop').hide()
+    })
     // 点击查看更多
     $('.btn').click(function () {
         var html = `            <li>
@@ -189,8 +196,21 @@
         $('.list ul').append(html).append(html)
     })
 
-    $('.search img').click(function(){
+    $('.search img').click(function () {
         $('.list').hide()
-        $('.singleList').show()
+        // 找到的列表
+        // $('.singleList').show()
+
+        // 没有找到
+        // $('.list').hide()
+
+        // 测试代码
+        $('.singleList').hide()
+        $('.empty').hide()
+        if (parseInt(Math.random() * 10) > 4) {
+            $('.singleList').show()
+        } else {
+            $('.empty').show()
+        }
     })
 </script>

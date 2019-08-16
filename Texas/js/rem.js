@@ -6,6 +6,7 @@
 	var or = "orientationchange" in win ? "orientationchange" : "resize";
 	//创建viewport	
 	_createViewport();
+	_refreshRem();
 	if (doc.addEventListener) {
 		win.addEventListener(or, _refreshRem, false);
 		doc.addEventListener("DOMContentLoaded", _refreshRem, false);
