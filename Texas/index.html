@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="index">
+    <header>
+        <img src="./img/top_bg.png" alt="">
+    </header>
+    <div class="search">
+        <input type="text" placeholder="请输入作品名称或关键词搜索">
+        <img src="./img/search.png" alt="">
+    </div>
+    <div class="list">
+        <ul class="clearfix">
+            <li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>Top<span>1</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <p>
+                        设置量：
+                        <span>12458</span>
+                    </p>
+                    <em>设为彩铃</em>
+                </div>
+            </li>
+            <li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>Top<span>2</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <p>
+                        设置量：
+                        <span>123</span>
+                    </p>
+                    <em>设为彩铃</em>
+                </div>
+            </li>
+            <li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>Top<span>3</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <p>
+                        设置量：
+                        <span>123</span>
+                    </p>
+                    <em>设为彩铃</em>
+                </div>
+            </li>
+            <li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>Top<span>4</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <p>
+                        设置量：
+                        <span>123</span>
+                    </p>
+                    <em>设为彩铃</em>
+                </div>
+            </li>
+        </ul>
+        <div class="btn">
+            点击查看更多
+        </div>
+    </div>
+    <div id="singleList" class="singleList">
+        <ul>
+            <li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>TOP<span>1</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <em>设为彩铃</em>
+                </div>
+            </li>
+            <li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>TOP<span>2</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <em>设为彩铃</em>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script>
+    // 点击查看更多
+    $('.btn').click(function () {
+        var html = `            <li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>Top<span>1</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <p>
+                        设置量：
+                        <span>12458</span>
+                    </p>
+                    <em>设为彩铃</em>
+                </div>
+            </li><li>
+                <div class="top">
+                    <img src="./img/list_img.png" alt="">
+                    <div class="corner">
+                        <img src="./img/hot_left.png" alt="" class="">
+                        <p>Top<span>1</span></p>
+                    </div>
+                    <p>
+                        作品名称最火彩铃都在下
+                    </p>
+                </div>
+                <div class="down">
+                    <p>
+                        设置量：
+                        <span>12458</span>
+                    </p>
+                    <em>设为彩铃</em>
+                </div>
+            </li>`
+
+        $('.list ul').append(html).append(html)
+    })
+
+    $('.search img').click(function(){
+        $('.list').hide()
+        $('.singleList').show()
+    })
+</script>
