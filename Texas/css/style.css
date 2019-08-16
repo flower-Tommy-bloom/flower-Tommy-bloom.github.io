@@ -44,13 +44,16 @@
 }
 #index .list ul,
 #index .singleList ul {
-  padding: 0 0.18rem;
+  margin: 0 0.18rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 #index .list ul li,
 #index .singleList ul li {
-  float: left;
-  margin-right: 0.12rem;
+  margin-right: 1%;
   width: 3.5rem;
+  width: 49%;
 }
 #index .list ul li:nth-child(2n),
 #index .singleList ul li:nth-child(2n) {
@@ -152,14 +155,11 @@
   display: none;
 }
 #index #singleList li {
-  margin-right: 0;
-  float: none;
-  width: 6.78rem;
+  width: 95%;
   margin: 0 auto;
 }
 #index #singleList li .top {
   height: 5.07rem;
-  height: 100%;
 }
 #index #singleList li .top img {
   width: 100%;
@@ -228,7 +228,7 @@
   margin: 0.8rem auto .54rem;
   text-align: center;
   font-size: 0.28rem;
-  line-height: 0.28rem;
+  line-height: 0.36rem;
 }
 #index .pupop .enter .enterBtn {
   width: 3.15rem;

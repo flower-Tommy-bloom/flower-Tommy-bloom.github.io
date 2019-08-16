@@ -24,7 +24,7 @@
         <img src="./img/search.png" alt="">
     </div>
     <div class="list">
-        <ul class="clearfix">
+        <ul class="">
             <li>
                 <div class="top">
                     <img src="./img/list_img.png" alt="">
@@ -195,6 +195,7 @@
 
         $('.list ul').append(html).append(html)
     })
+    
 
     $('.search img').click(function () {
         $('.list').hide()
@@ -202,7 +203,7 @@
         // $('.singleList').show()
 
         // 没有找到
-        // $('.list').hide()
+        // $('.empty').show()
 
         // 测试代码
         $('.singleList').hide()

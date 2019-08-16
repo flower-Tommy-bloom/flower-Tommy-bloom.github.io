@@ -26,7 +26,8 @@
 	 * 动态更新rem
 	 */
 	function _refreshRem() {
-		var clientW = docEle.clientWidth || 320;
+		// var clientW = docEle.clientWidth || 320;
+		var clientW = doc.body.clientWidth
 		//设置最大和最小宽度取值
 		if (clientW > designW) {
 			clientW = designW
@@ -34,6 +35,6 @@
 			clientW = 320;
 		}
 		docEle.style.fontSize = clientW / ratio + "px";
-		console.log('fontSize:' + docEle.style.fontSize);
+		console.log('clientW:',clientW,'fontSize:' + docEle.style.fontSize);
 	};
 })(window, 750); //750为设计稿宽度px值,根据实际设计稿大小对应设置
