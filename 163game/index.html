@@ -84,11 +84,11 @@
         </div>
         <!-- 失败 -->
         <div class="fail">
-                <h3>提交失败</h3>
-                <p>请确保网易游戏定向流量包正常订购，<br />
-                    耐心等待下月发放游戏权益。</p>
-                <div class="btn close">关闭</div>
-            </div>
+            <h3>提交失败</h3>
+            <p>请确保网易游戏定向流量包正常订购，<br />
+                耐心等待下月发放游戏权益。</p>
+            <div class="btn close">关闭</div>
+        </div>
     </div>
 </body>
 
@@ -97,32 +97,128 @@
 <script src="./js/zepto.min.js"></script>
 <script src="./js/select.js"></script>
 <script>
-    var iosProvinces = [{
-            'id': '110000',
-            'value': '北京市北京市',
-            'parentId': '0'
+    // 四个选择器数据,后面三个都是根据第一个的parentId的匹配的.
+    var data1 = [
+        {
+            value: '决战！平安京',
+            parentId: '1',
+            id: '1',
         },
         {
-            'id': '120000',
-            'value': '天津市',
-            'parentId': '0'
+            value: '神都夜行录',
+            parentId: '2',
+            id:'2'
         },
         {
-            'id': '130000',
-            'value': '河北省',
-            'parentId': '0'
-        },
-        {
-            'id': '140000',
-            'value': '山西省',
-            'parentId': '0'
-        },
-        {
-            'id': '150000',
-            'value': '内蒙古自治区',
-            'parentId': '0'
+            value: '终结者',
+            parentId: '3',
+            id:'3'
         }
-    ];
+    ]
+    var data2 = [
+        {
+            value: '平安京',
+            parentId: '1',
+            id: '11',
+        },
+        {
+            value: '神都夜行录',
+            parentId: '2',
+            id:'21'
+        },
+        {
+            value: '终结者',
+            parentId: '3',
+            id:'31'
+        }
+    ]
+    var data3 = [
+        {
+            value: '平安京',
+            parentId: '1',
+            id: '12',
+        },
+        {
+            value: '10001琴心雪境',
+            parentId: '2',
+            id:'211'
+        },
+        {
+            value: '10011金风玉露',
+            parentId: '2',
+            id:'212'
+        },
+        {
+            value: '10041梦回神都',
+            parentId: '2',
+            id:'213'
+        },
+        {
+            value: '10051沧笙仪梦',
+            parentId: '2',
+            id:'214'
+        },
+        {
+            value: '终结者',
+            parentId: '3',
+            id:'311'
+        }
+    ]
+    var data4 = [
+        {
+            value: '勾玉*50',
+            parentId: '1',
+            id: '1',
+        },
+        {
+            value: '祈福绘马*1',
+            parentId: '1',
+            id: '2',
+        },
+        {
+            value: '中级澄心值道具*3',
+            parentId: '1',
+            id: '3',
+        },
+        {
+            value: '金币*108',
+            parentId: '1',
+            id: '4',
+        },
+
+        {
+            value: '玉璧*2',
+            parentId: '2',
+            id:'1'
+        },
+        {
+            value: '青团食盒*2',
+            parentId: '2',
+            id:'2'
+        },
+        {
+            value: '小葱拌豆腐*2',
+            parentId: '2',
+            id:'3'
+        },
+        {
+            value: '奇宝积分*60',
+            parentId: '3',
+            id:'1'
+        },
+        {
+            value: '冰龙咆哮7天',
+            parentId: '3',
+            id:'2'
+        },
+        {
+            value: '彩钻*100',
+            parentId: '3',
+            id:'3'
+        }
+    ]
+
+
     select();
     // 选择器
     function select() {
@@ -137,23 +233,42 @@
                 }
             }
             var dom = $(this).children('.select')
-            var title = ''
+            var title = '',data = []
             switch (index) {
                 case 0:
                     title = '选择游戏'
+                    data = data1
                     break;
                 case 1:
                     title = '选择大区'
+                    var parentId = $('form li').eq(0).children('div').children('p').attr('data-id')
+                    data2.forEach(function(item){
+                        if(item.parentId == parentId){
+                            data.push(item)
+                        }
+                    })
                     break;
                 case 2:
                     title = '选择服务器'
+                    var parentId = $('form li').eq(0).children('div').children('p').attr('data-id')
+                    data3.forEach(function(item){
+                        if(item.parentId == parentId){
+                            data.push(item)
+                        }
+                    })
                     break;
                 case 3:
                     title = '选择权益'
+                    var parentId = $('form li').eq(0).children('div').children('p').attr('data-id')
+                    data4.forEach(function(item){
+                        if(item.parentId == parentId){
+                            data.push(item)
+                        }
+                    })
                     break;
             }
             var iosSelect = new IosSelect(1,
-                [iosProvinces], {
+                [data], {
                     title: title,
                     itemHeight: 0.7,
                     headerHeight: 0.86,
@@ -170,20 +285,28 @@
                         dom.children('p').show()
                         dom.children('p').html(selectOneObj.value)
                         dom.children('p').attr('data-name', selectOneObj.value);
-                        dom.children('p').attr('data-code', selectOneObj.id);
+                        dom.children('p').attr('data-id', selectOneObj.id);
                     }
                 });
         });
     }
-    
-    $('.submit').click(function(){
+
+    $('.submit').click(function () {
         $('.pupop').show()
         $('.pupop .success').show()
+        // 弹窗禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        });
     })
-    
+
     // 关闭弹窗
-    $('.close').click(function(){ close() })
-    function close(){
+    $('.close').click(function () {
+        close()
+    })
+
+    function close() {
         $('.pupop').hide()
         $('.pupop > div').hide()
         // 放开弹窗禁止内容滚动
@@ -203,10 +326,3 @@
         }, 1000)
     }
 </script>
-
-<!-- // 弹窗禁止内容滚动
-        $('body').css({
-            position: 'fixed',
-            top: -document.body.scrollTop + 'px'
-        }); -->
-
