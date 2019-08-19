@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/select.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="index">
+    <img src="./img/header.png" alt="" class="header">
+    <form>
+        <div class="item">
+            <span>确认手机号码</span>
+            <div class="input">
+                <input type="text" placeholder="请输入手机号码">
+            </div>
+        </div>
+        <div class="item">
+            <span>游戏登录账号或游戏ID</span>
+            <div class="input">
+                <input type="text" placeholder="请输入账号或ID">
+            </div>
+        </div>
+        <ul class="clearfix">
+            <li>
+                <span>选择游戏</span>
+                <div class="select">
+                    <span>请选择</span>
+                    <p></p>
+                    <img src="./img/corner.png" alt="">
+                </div>
+            </li>
+            <li>
+                <span>选择大区</span>
+                <div class="select">
+                    <span>请选择</span>
+                    <p></p>
+                    <img src="./img/corner.png" alt="">
+                </div>
+            </li>
+            <li>
+                <span>选择服务器</span>
+                <div class="select">
+                    <span>请选择</span>
+                    <p></p>
+                    <img src="./img/corner.png" alt="">
+                </div>
+            </li>
+            <li>
+                <span>选择权益</span>
+                <div class="select">
+                    <span>请选择</span>
+                    <p></p>
+                    <img src="./img/corner.png" alt="">
+                </div>
+            </li>
+        </ul>
+    </form>
+    <div class="submit">确认提交</div>
+    <div class="docs">
+        <span>
+            活动说明<br />
+            1、请务必确保手机号码已成功订购网易游戏定向流量包；确保网易游戏登录账号或游戏ID填写正确，否则将造成权益发放失败。<br />
+            2、游戏权益选定后不可更改，仅赠送1次，次月5日前自动发放，需至游戏客户端内激活使用。如用户次月退订流量包，则不予发放游戏权益。
+        </span>
+    </div>
+    <div class="pupop">
+        <!-- 成功 -->
+        <div class="success">
+            <h3>提交成功</h3>
+            <p>请确保网易游戏定向流量包正常订购，<br />
+                耐心等待下月发放游戏权益。</p>
+            <div class="btn close">关闭</div>
+        </div>
+        <!-- 失败 -->
+        <div class="fail">
+                <h3>提交失败</h3>
+                <p>请确保网易游戏定向流量包正常订购，<br />
+                    耐心等待下月发放游戏权益。</p>
+                <div class="btn close">关闭</div>
+            </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script src="./js/select.js"></script>
+<script>
+    var iosProvinces = [{
+            'id': '110000',
+            'value': '北京市北京市',
+            'parentId': '0'
+        },
+        {
+            'id': '120000',
+            'value': '天津市',
+            'parentId': '0'
+        },
+        {
+            'id': '130000',
+            'value': '河北省',
+            'parentId': '0'
+        },
+        {
+            'id': '140000',
+            'value': '山西省',
+            'parentId': '0'
+        },
+        {
+            'id': '150000',
+            'value': '内蒙古自治区',
+            'parentId': '0'
+        }
+    ];
+    select();
+    // 选择器
+    function select() {
+        var selectContactDom = $('form li');
+        selectContactDom.bind('click', function () {
+            var index = $(this).index()
+            for (var i = 0; i < index; i++) {
+                var val = $('form li').eq(i).children('div').children('p').html()
+                if (!val) {
+                    toast('请先' + ['选择游戏', '选择大区', '选择服务器', '选择权益'][i])
+                    return
+                }
+            }
+            var dom = $(this).children('.select')
+            var title = ''
+            switch (index) {
+                case 0:
+                    title = '选择游戏'
+                    break;
+                case 1:
+                    title = '选择大区'
+                    break;
+                case 2:
+                    title = '选择服务器'
+                    break;
+                case 3:
+                    title = '选择权益'
+                    break;
+            }
+            var iosSelect = new IosSelect(1,
+                [iosProvinces], {
+                    title: title,
+                    itemHeight: 0.7,
+                    headerHeight: 0.86,
+                    itemShowCount: 5,
+                    cssUnit: 'rem',
+                    relation: [1, 1],
+                    callback: function (selectOneObj, selectTwoObj, selectThreeObj) {
+                        for (var i = index; i < 4; i++) {
+                            $('form li').eq(i).children('div').children('p').hide()
+                            $('form li').eq(i).children('div').children('p').html('')
+                            $('form li').eq(i).children('div').children('span').show()
+                        }
+                        dom.children('span').hide()
+                        dom.children('p').show()
+                        dom.children('p').html(selectOneObj.value)
+                        dom.children('p').attr('data-name', selectOneObj.value);
+                        dom.children('p').attr('data-code', selectOneObj.id);
+                    }
+                });
+        });
+    }
+    
+    $('.submit').click(function(){
+        $('.pupop').show()
+        $('.pupop .success').show()
+    })
+    
+    // 关闭弹窗
+    $('.close').click(function(){ close() })
+    function close(){
+        $('.pupop').hide()
+        $('.pupop > div').hide()
+        // 放开弹窗禁止内容滚动
+        var top = -document.body.style.top.replace('px');
+        $('body').css({
+            position: 'static'
+        });
+        window.scrollTo(0, top);
+    }
+    // 提示
+    function toast(mess) {
+        var str = '<div class="toast"><span></span></div>';
+        $("body").append(str);
+        $(".toast").find("span").html(mess);
+        setTimeout(function () {
+            $(".toast").hide()
+        }, 1000)
+    }
+</script>
+
+<!-- // 弹窗禁止内容滚动
+        $('body').css({
+            position: 'fixed',
+            top: -document.body.scrollTop + 'px'
+        }); -->
+
