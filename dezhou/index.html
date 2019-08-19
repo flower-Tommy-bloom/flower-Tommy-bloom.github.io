@@ -27,7 +27,8 @@
         <ul class="">
             <li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>Top<span>1</span></p>
@@ -43,7 +44,8 @@
             </li>
             <li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>Top<span>2</span></p>
@@ -59,7 +61,8 @@
             </li>
             <li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>Top<span>3</span></p>
@@ -75,7 +78,8 @@
             </li>
             <li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>Top<span>4</span></p>
@@ -98,14 +102,13 @@
         <ul>
             <li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>TOP<span>1</span></p>
                     </div>
-                    <p>
-                        作品名称最火彩铃都在下
-                    </p>
+                    <p>作品名称最火彩铃都在下</p>
                 </div>
                 <div class="down">
                     <em>设为彩铃</em>
@@ -113,7 +116,8 @@
             </li>
             <li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                        <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>TOP<span>2</span></p>
@@ -132,13 +136,17 @@
         <img src="./img/notFind.png" alt="">
     </div>
     <div class="pupop">
-        <!-- 二次确认 -->
-        <div class="enter">
+        <!-- 确认 -->
+        <div class="submit">
             <img class="close" src="./img/close.png" alt="">
             <p>亲，你需要先开通视频彩铃功能，<br />
                 （每月6元，首月赠送6元话费），<br />
                 才可设置为自己的彩铃哟！</p>
-            <div class="enterBtn">设为彩铃</div>
+            <!-- <div class="enterBtn">设为彩铃</div> -->
+            <div class="btnGroup">
+                <span class="close">在想想</span>
+                <span>立即开通</span>
+            </div>
         </div>
     </div>
 </body>
@@ -149,15 +157,18 @@
 <script>
     $('em').click(function () {
         $('.pupop').show()
+        $('.submit').show()
     })
     $('.close').click(function () {
         $('.pupop').hide()
+        $('.pupop > div').hide()
     })
     // 点击查看更多
     $('.btn').click(function () {
         var html = `            <li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>Top<span>1</span></p>
@@ -175,7 +186,8 @@
                 </div>
             </li><li>
                 <div class="top">
-                    <img src="./img/list_img.png" alt="">
+                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
                         <p>Top<span>1</span></p>
@@ -196,6 +208,11 @@
         $('.list ul').append(html).append(html)
     })
 
+    $('ul').on('click', '.pause-icon', function () {
+        $(this).hide()
+        $(this).parents().children('video')[0].play();
+        // $(this).parents().children('p').css('z-index',-1)
+    })
 
     $('.search img').click(function () {
         $('.list').hide()
@@ -203,17 +220,16 @@
         // $('.singleList').show()
         // 没有找到
         // $('.empty').show()
-        if(!window.test1){
+        if (!window.test1) {
             window.test1 = 1
         }
         // 测试代码
         $('.singleList').hide()
         $('.empty').hide()
-        if(window.test1++ % 2 == 0){
+        if (window.test1++ % 2 == 0) {
             $('.singleList').show()
-        }else{
+        } else {
             $('.empty').show()
         }
     })
-
 </script>
