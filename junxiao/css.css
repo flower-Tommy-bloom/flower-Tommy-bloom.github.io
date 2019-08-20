@@ -16,6 +16,7 @@ body {
     background: url("img/1bg.png") no-repeat;
     background-color: #3c302d;
     background-size: 100%;
+    overflow-x: hidden;
 }
 
 .card_page2 .title {
@@ -162,19 +163,17 @@ body {
     margin-top: 0.2rem;
 }
 
-.card_page2 .content .tc a {
+.card_page2 .content .tc .checkDetail {
     font-size: 0.2rem;
     color: #a7a4a3;
     margin-top: 0.2rem;
+    border-bottom: 0.01rem solid #a7a4a3;
 }
 
 .card_page2 .content .card_coupon {
+    display: inline-block;
     width: 7.18rem;
-    height: 5.23rem;
-    background: url("img/card-coupon.png");
-    background-size: 100% 100%;
-    margin: 0 auto;
-    margin-top: 0.5rem;
+    margin: .5rem 0 0 .16rem;
 }
 
 .bottom-bg {
