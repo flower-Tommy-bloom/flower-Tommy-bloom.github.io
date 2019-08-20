@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.card_page2 {
+    width: 100%;
+    background: url("img/1bg.png") no-repeat;
+    background-color: #3c302d;
+    background-size: 100%;
+}
+
+.card_page2 .title {
+    width: 100%;
+    height: 5.11rem;
+}
+
+.card_page2 .content {
+    padding-top: 1rem;
+    box-sizing: border-box;
+}
+
+.card_page2 .content .tc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7.18rem;
+    height: 8.6rem;
+    background-color: #271d17;
+    border-radius: 0.12rem;
+    margin: 0 auto;
+}
+
+.card_page2 .content .tc .select-logo {
+    width: 6.51rem;
+    height: 2.75rem;
+    margin: 0 auto;
+    margin-top: -1.35rem;
+    position: relative;
+}
+.card_page2 .content .tc .select-logo img{
+    width: 4.2em;
+}
+.card_page2 .content .tc .select-logo .part15 .btn1 {
+    position: absolute;
+    top: 0;
+    left: -.26rem;
+    transform: scale(1.1)
+}
+
+.card_page2 .content .tc .select-logo .part15 .btn2 {
+    position: absolute;
+    top: 0;
+    right: -.5rem;
+    transform: scale(.9)
+}
+.part15{
+    display: block;
+}
+.part30{
+    display: none;
+}
+.part30 .btn2{
+    position: absolute;
+    top: 0;
+    right: -.3rem;
+    transform: scale(1.1)
+}
+.part30 .btn1{
+    position: absolute;
+    top: 0;
+    left: -.5rem;
+    transform: scale(.9)
+}
+.tips-content-box{
+    height: 1.4rem;
+    line-height: 2.6rem
+}
+.card_page2 .content .tc .tips-content {
+    width: 6.46rem;
+}
+
+
+
+.card_page2 .content .tc .input-box {
+    display: flex;
+    align-items: center;
+    width: 6.46rem;
+    height: 0.9rem;
+    background: url("img/1input.png");
+    background-size: 100% 100%;
+    margin-top: 0.6rem;
+}
+
+.card_page2 .content .tc .input-box input {
+    width: 70%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 0.3rem;
+    box-sizing: border-box;
+    font-size: 0.28rem;
+    color: #999999;
+    background: none;
+}
+
+.card_page2 .content .tc .input-box .code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 0.68rem;
+    background-color: #f78275;
+    border-radius: 0.08rem;
+    margin-right: 0.1rem;
+    font-size: 0.2rem;
+    color: #ffffff;
+}
+
+.card_page2 .content .tc .input-box .code2 {
+    background: url("img/code_wait.png");
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 360px) {
+    .card_page2 .content .tc .input-box .code p {
+        width: 1.8rem;
+        font-size: 0.24rem;
+        transform: scale(0.8);
+    }
+}
+
+.card_page2 .content .tc .tc-btn {
+    width: 6.45rem;
+    height: 0.94rem;
+    background: url("img/1btn1.png");
+    background-size: 100% 100%;
+    margin-top: 0.4rem;
+}
+
+.card_page2 .content .new .tc-btn {
+    width: 6.45rem;
+    height: 0.94rem;
+    background: url("img/tc2_btn.png");
+    background-size: 100% 100%;
+    margin-top: 0.4rem;
+}
+
+.card_page2 .content .tc .desc-text {
+    text-align: center;
+    font-size: 0.24rem;
+    color: #ffb54c;
+    margin-top: 0.2rem;
+}
+
+.card_page2 .content .tc a {
+    font-size: 0.2rem;
+    color: #a7a4a3;
+    margin-top: 0.2rem;
+}
+
+.card_page2 .content .card_coupon {
+    width: 7.18rem;
+    height: 5.23rem;
+    background: url("img/card-coupon.png");
+    background-size: 100% 100%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+
+.bottom-bg {
+    width: 100%;
+    height: 1.79rem;
+    margin-top: 0.5rem;
+}
+
+/*弹窗*/
+.user_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 44;
+    overflow: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    box-sizing: border-box;
+}
+
+.user_box .business-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 6.98rem;
+    height: 11.93rem;
+    background: url("img/business-box1.png");
+    background-size: 100% 100%;
+    padding-top: 1.2rem;
+    box-sizing: border-box;
+}
+
+.user_box .double {
+    width: 6.98rem;
+    height: 8.39rem;
+    background: url("img/business-box2.png");
+    background-size: 100% 100%;
+    padding-top: 2.5rem;
+    box-sizing: border-box;
+}
+
+.user_box .business-box .content-box {
+    width: 100%;
+    padding-bottom: 0.2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.user_box .business-box ul {
+    list-style: none;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.user_box .business-box ul .logo-list {
+    width: 6.07rem;
+    height: 6.13rem;
+    margin: 0 auto;
+}
+
+.user_box .double ul {
+    list-style: none;
+    width: 88%;
+    height: 5.6rem;
+    overflow-y: auto;
+}
+
+.user_box .business-box ul li {
+    font-size: 0.24rem;
+    color: #e0e0e0;
+    line-height: 0.38rem;
+}
+
+.user_box .business-box ul .title-text {
+    font-size: 0.3rem;
+    font-weight: 600;
+}
+
+.user_box .business-box ul .title-desc {
+    margin-top: 0.4rem;
+    font-size: 0.3rem;
+    font-weight: 600;
+}
+
+.user_box .business-box .close {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    width: 0.35rem;
+    height: 0.35rem;
+    background: url("img/close.png");
+    background-size: 100% 100%;
+}
+
+.user_box .success-box {
+    width: 4.95rem;
+    height: 6.2rem;
+    background: #fff;
+    border-radius: 12px;
+    padding-top: 0.2rem;
+    box-sizing: border-box;
+}
+
+.user_box .success-box .box-title {
+    font-size: 0.4rem;
+    color: #3662a1;
+    text-align: center;
+    font-weight: 600;
+}
+
+.user_box .success-box .box-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.2rem;
+    color: #434343;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+.user_box .success-box .box-desc .line {
+    width: 1.2rem;
+    height: 0.02rem;
+    background: url("img/line.png");
+    background-size: 100% 100%;
+}
+
+.user_box .success-box .box-desc .line:first-child {
+    margin-right: 0.2rem;
+}
+
+.user_box .success-box .box-desc .line:last-child {
+    margin-left: 0.2rem;
+}
+
+.user_box .success-box .box-text {
+    width: 88%;
+    font-size: 0.2rem;
+    color: #3e3a3a;
+    margin: 0 auto;
+    margin-top: 0.1rem;
+}
+
+.user_box .success-box .logo {
+    width: 4.27rem;
+    height: 2.38rem;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.user_box .success-box .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.user_box .success-box .btn {
+    width: 1.97em;
+    height: 0.51rem;
+    background: url("img/box-btn.png");
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
