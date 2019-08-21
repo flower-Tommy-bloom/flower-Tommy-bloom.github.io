@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="index">
+    <div class="main">
+        <div class="form">
+            <div class="item item1">
+                <img src="./img/phone.png" alt="">
+                <input type="text" placeholder="请输入手机号码">
+            </div>
+            <div class="item item2">
+                <img src="./img/codeIcon.png" alt="">
+                <input type="text" placeholder="请输入验证码">
+                <span class="getCode">发送验证码</span>
+            </div>
+        </div>
+        <div class="submit">
+            <span>立即抢购</span>
+            <img src="./img/click.png" alt="">
+        </div>
+        <div class="rule">
+            <p>了解更多产品内容</p>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="pupop">
+        <div class="success">
+            <img src="./img/close.png" alt="" class="close">
+            <p>已提交领取申请，成功受理信息请以中
+                国移动下发的短信为准，目前由于订购
+                用户较多，短信可能会有时延，请耐心
+                等待，感谢您对中国移动的支持。
+            </p>
+        </div>
+        <div class="fail">
+            <p>已提交领取申请，成功受理信息请以中
+                国移动下发的短信为准，目前由于订购
+            </p>
+            <div class="btn2">
+                <span class="close">取消</span>
+                <span>确定</span>
+            </div>
+        </div>
+        <div class="successed">
+            <img src="./img/close.png" alt="" class="close">
+            <p>您已领取过头条系首三月全额返费流量包
+                （联合会员版）。
+                <span>点击继续订购，畅享9元15G定向流量。</span>
+            </p>
+            <div class="btn1">
+                去订购
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script>
+
+console.log(document.documentElement.clientHeight,'document.documentElement.clientHeight')
+    $('.submit').click(function(){
+        $('.pupop').show()
+
+        // 三个弹窗
+        // $('.success').show()
+        // $('.fail').show()
+        // $('.successed').show()
+
+        // 测试代码
+        if(!window.aa){
+            window.aa = 0
+        }
+        switch(window.aa++){
+            case 0:
+            $('.success').show()
+            break;
+            case 1:
+            $('.fail').show()
+            break;
+            case 2:
+            $('.successed').show()
+            window.aa = 0
+            break;
+        }
+    })
+
+    $('.close').click(function () {
+        close()
+    })
+    function close() {
+        $('.pupop').hide()
+        $('.pupop > div').hide()
+    }
+</script>
+
+
+
