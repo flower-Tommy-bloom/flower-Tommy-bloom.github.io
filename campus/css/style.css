@@ -1,0 +1,99 @@
+body {
+  background-color: #f5f7fa;
+}
+.topBg {
+  padding-top: 1.162rem;
+  background: url('../img/校园版权益bg.png') no-repeat;
+  background-size: 100%;
+  height: 3.486rem;
+}
+.topBg .swiper-container {
+  width: 7.304rem;
+}
+.topBg img {
+  width: 3.0987rem;
+}
+.topBg .swiper-slide-duplicate-prev,
+.topBg .swiper-slide-duplicate-next {
+  visibility: hidden;
+}
+.topBg .swiper-slide-duplicate-active {
+  visibility: hidden;
+}
+.topBg .pagination .swiper-pagination {
+  position: static;
+  transform: translate3d(0, -0.3rem, 0);
+}
+.topBg .pagination span {
+  width: 0.4rem;
+  height: 0.06rem;
+  background-color: #007efc;
+  border-radius: 0;
+  margin: 0.3rem 0.05rem;
+}
+.ali,
+.kuaishou,
+.jd {
+  box-sizing: border-box;
+  padding: 0.166rem 0.34rem 1.8rem;
+}
+.ali > img,
+.kuaishou > img,
+.jd > img {
+  width: 6.8rem;
+}
+.ali .docs,
+.kuaishou .docs,
+.jd .docs {
+  margin-bottom: 0.2214rem;
+}
+.ali .docs > p,
+.kuaishou .docs > p,
+.jd .docs > p {
+  padding: 0 0.0554rem;
+  font-size: 0.2656rem;
+  font-family: AlibabaPuHuiTiR;
+  color: #393e46;
+  line-height: 0.5312rem;
+}
+.swiper-main {
+  transition-property: height;
+  transition-duration: .3s;
+}
+.btn {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 0.166rem;
+  background-color: #f5f7fa;
+  display: flex;
+  z-index: 10;
+  justify-content: space-between;
+}
+.btn .normal {
+  width: 2.854rem;
+  height: 1.2rem;
+}
+.btn .take {
+  width: 4.2042rem;
+  height: 1.2rem;
+}
+.btn .tips {
+  position: absolute;
+  top: -0.64rem;
+  left: 0.249rem;
+  width: 4.067rem;
+}
+.btn .tips img {
+  width: 100%;
+}
+.btn .tips .close {
+  position: absolute;
+  top: 0.0415rem;
+  right: 0rem;
+  width: 0.1743rem;
+  height: 0.1743rem;
+  box-sizing: content-box;
+  padding: 0.166rem;
+}
