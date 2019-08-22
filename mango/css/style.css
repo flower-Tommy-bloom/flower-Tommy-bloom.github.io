@@ -14,7 +14,7 @@
 #index .bg_foot {
   width: 100%;
   height: 0;
-  transform: translateY(-1px) rotateX(180deg);
+  transform: translateY(-0.02rem) rotateX(180deg);
 }
 #index .main {
   position: absolute;
@@ -29,30 +29,30 @@
   justify-content: space-between;
 }
 #index .main .flower {
-  margin-top: 340px;
-  padding: 0 62px;
+  margin-top: 6.8rem;
+  padding: 0 1.24rem;
 }
 #index .main .flower span,
 #index .main .flower a {
-  width: 118px;
-  height: 35px;
+  width: 2.36rem;
+  height: 0.7rem;
 }
 #index .main .flow15G {
   justify-content: center;
-  margin-top: 160px;
+  margin-top: 3.2rem;
 }
 #index .main .flow15G span,
 #index .main .flow15G a {
-  width: 124px;
-  height: 35px;
+  width: 2.48rem;
+  height: 0.7rem;
 }
 #index .main .footer {
-  margin-top: 48px;
-  padding: 0 34px;
+  margin-top: 0.96rem;
+  padding: 0 0.68rem;
 }
 #index .main .footer span {
-  width: 130px;
-  height: 28px;
+  width: 2.6rem;
+  height: 0.56rem;
 }
 .pupop {
   display: none;
@@ -106,27 +106,27 @@
   line-height: 0.36rem;
 }
 .pupop .check {
-  height: 240px;
+  height: 4.8rem;
 }
 .pupop .check .input {
-  width: 218px;
-  height: 41px;
+  width: 4.36rem;
+  height: 0.82rem;
   background-color: #bd7134;
-  border-radius: 10px;
-  margin: 50px auto 0;
+  border-radius: 0.2rem;
+  margin: 1rem auto 0;
 }
 .pupop .check .input input {
   width: 100%;
   height: 100%;
-  padding-left: 10px;
-  font-size: 14px;
+  padding-left: 0.2rem;
+  font-size: 0.28rem;
   color: #FFF;
 }
 .pupop .check .input input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 .pupop .check .ok {
-  margin-top: 30px;
+  margin-top: 0.6rem;
 }
 .pupop .check .close {
   bottom: -1.88rem;
@@ -183,17 +183,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 281px;
+  width: 5.62rem;
   z-index: -1;
 }
 .pupop .p_myLotto ul {
-  padding: 54px 0 0 12px;
+  padding: 1.08rem 0 0 0.24rem;
 }
 .pupop .p_myLotto ul li {
   margin-top: 0.2rem;
 }
 .pupop .p_myLotto ul img {
-  width: 235px;
+  width: 4.7rem;
 }
 .pupop .p_myLotto p {
   margin-top: 0.2rem;
@@ -234,7 +234,7 @@
 #lotto .bg_foot {
   width: 100%;
   height: 0;
-  transform: translateY(-1px) rotateX(180deg);
+  transform: translateY(-0.02rem) rotateX(180deg);
 }
 #lotto .content {
   position: absolute;
@@ -277,15 +277,15 @@
   align-items: center;
 }
 #lotto .content .main div img {
-  width: 31px;
-  height: 31px;
+  width: 0.62rem;
+  height: 0.62rem;
 }
 #lotto .content .main div span {
   font-family: MicrosoftYaHei-Bold;
-  font-size: 14px;
+  font-size: 0.28rem;
   font-weight: bold;
-  line-height: 24px;
-  letter-spacing: 0px;
+  line-height: 0.48rem;
+  letter-spacing: 0rem;
   color: #ea5504;
 }
 #lotto .content .main div em {
@@ -296,20 +296,20 @@
   width: 100%;
   text-align: center;
   font-family: MicrosoftYaHei;
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-size: 0.2rem;
+  letter-spacing: 0.02rem;
   color: #ea5504;
 }
 #lotto .content .main .ticket img {
-  width: 43px;
+  width: 0.86rem;
 }
 #lotto .content .main .ticket span {
-  padding: 0 12px;
+  padding: 0 0.24rem;
   text-align: center;
-  line-height: 14px;
+  line-height: 0.28rem;
 }
 #lotto .content .main .ticket2 img {
-  margin-top: 10px;
+  margin-top: 0.2rem;
 }
 #lotto .content .main .avtive {
   background-color: gold;
@@ -320,12 +320,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 90px;
-  padding: 0 34px;
+  margin-top: 1.8rem;
+  padding: 0 0.68rem;
 }
 #lotto .content footer span {
   font-size: 0;
   opacity: 0;
-  width: 134px;
-  height: 26px;
+  width: 2.68rem;
+  height: 0.52rem;
 }
