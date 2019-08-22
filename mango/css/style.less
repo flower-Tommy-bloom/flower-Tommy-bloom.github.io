@@ -1,0 +1,384 @@
+#index {
+    background: linear-gradient(90deg, #ffb03d, #ffd15e, #ffb03d);
+    position: relative;
+    font-size: 0;
+
+    span,a {
+        font-size: 0;
+        opacity: 0;
+    }
+
+    .bg {
+        width: 100%;
+    }
+
+    .bg_foot {
+        width: 100%;
+        height: 0;
+        transform: translateY(-1px) rotateX(180deg);
+    }
+
+    .main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flower {
+            margin-top: 340px;
+            padding: 0 62px;
+
+            span,a {
+                width: 118px;
+                height: 35px;
+            }
+        }
+
+        .flow15G {
+            justify-content: center;
+            margin-top: 160px;
+
+            span,a {
+                width: 124px;
+                height: 35px;
+            }
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding: 0 34px;
+
+            span {
+                width: 130px;
+                height: 28px;
+            }
+        }
+    }
+}
+
+.pupop {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1;
+    font-size: 0.24rem;
+
+    >div {
+        display: none;
+        width: 5.6rem;
+        height: 9rem;
+        margin: 3rem auto 0;
+        padding: 0.4rem 0.32rem 0;
+        border-radius: 0.18rem;
+        position: relative;
+        font-family: PingFang;
+        color: #fff;
+        line-height: 0.36rem;
+
+        .bbg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-12%, -12%);
+            width: 7.5rem;
+            z-index: -1;
+        }
+
+        .ok {
+            width: 2.16rem;
+            text-align: center;
+            margin: 0.24rem auto 0;
+        }
+
+        .close {
+            position: absolute;
+            left: 50%;
+            bottom: -0.84rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            transform: translateX(-50%);
+        }
+
+        .small {
+            display: block;
+            font-size: 0.24rem;
+            font-family: PingFang;
+            color: rgba(255, 255, 255, 1);
+            line-height: 0.36rem;
+        }
+    }
+
+    .check {
+        height: 240px;
+        .input {
+            width: 218px;
+            height: 41px;
+            background-color: #bd7134;
+            border-radius: 10px;
+            margin: 50px auto 0;
+            input {
+                width: 100%;
+                height: 100%;
+                padding-left: 10px;
+                font-size: 14px;
+                color: #FFF;
+                &::placeholder{
+                    color: rgba(255, 255, 255, .6)
+                }
+            }
+        }
+        .ok{
+            margin-top: 30px;
+        }
+        .close{
+            bottom: -1.88rem;
+        }
+    }
+
+    .p_rule {
+        margin-top: 1rem;
+        p {
+            height: 7.2rem;
+            overflow-y: scroll;
+        }
+    }
+
+    .nor {
+        height: 4.8rem;
+        padding-top: 1.28rem;
+
+        p {
+            padding: 0 0.12rem;
+            font-size: 0.36rem;
+            font-family: PingFang;
+            font-weight: bold;
+            text-align: center;
+            line-height: 0.48rem;
+        }
+
+        .small {
+            margin-top: 0.2rem;
+            padding: 0 0.32rem;
+        }
+
+        .close {
+            bottom: -1.68rem;
+        }
+    }
+
+    .p_mango7 {
+        p {
+            padding: 0;
+        }
+
+        .ok {
+            margin-top: 0.6rem;
+        }
+
+        .small {
+            padding: 0;
+        }
+    }
+
+    .p_emtpy {
+        height: 4rem;
+
+        .ok {
+            margin-top: 1rem;
+        }
+    }
+
+    .p_myLotto {
+        height: unset;
+        border-radius: 0.08rem;
+        padding: 0 0.2rem;
+        margin-top: 1.4rem;
+        position: relative;
+        .myLotto_bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 281px;
+            z-index: -1;
+        }
+
+        ul {
+            padding: 54px 0 0 12px;
+            li {
+                margin-top: 0.2rem;
+            }
+
+            img {
+                width: 235px;
+            }
+        }
+
+        p {
+            margin-top: 0.2rem;
+            padding: 0 0.12rem;
+            font-size: 0.22rem;
+            font-family: PingFang;
+            font-weight: 500;
+            color: #505050;
+            line-height: 0.32rem;
+        }
+        .close{
+            margin-bottom: -1.2em;
+        }
+
+        .ok {
+            padding-bottom: 0.2rem;
+        }
+    }
+
+    .p_notHava {
+        .ok {
+            margin-top: 1rem;
+        }
+
+        .close {
+            bottom: -1.18rem;
+        }
+    }
+
+    .p_got {
+        padding-top: 1.4rem;
+
+        .ok {
+            margin-top: 1.3rem;
+        }
+
+        .close {
+            bottom: -1.18rem;
+        }
+    }
+}
+
+#lotto {
+    font-family: Microsoft YaHei;
+
+    .bg {
+        width: 100%;
+    }
+
+    .bg_foot {
+        width: 100%;
+        height: 0;
+        transform: translateY(-1px) rotateX(180deg);
+    }
+
+    .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .main {
+            position: relative;
+            margin: 5.3rem auto 0;
+            width: 5.24rem;
+            height: 5.24rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .open{
+                margin-top: 0.2rem;
+                width: 1.66rem;
+                height: 1.66rem;
+                background-color: transparent;
+                box-shadow: 0 0.12rem 0 0 transparent;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            div {
+                width: 1.66rem;
+                height: 1.54rem;
+                background-color: #ffebeb;
+                margin-top: 0.2rem;
+                box-shadow: 0 0.12rem 0 0 #ffc2c8;
+                border-radius: 0.18rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+
+
+
+                img{
+                    width: 31px;
+                    height: 31px;
+                }
+                span {
+                    font-family: MicrosoftYaHei-Bold;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    color: #ea5504;
+                }
+                em{
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    text-align: center;
+                    font-family: MicrosoftYaHei;
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    color: #ea5504;
+                }
+            }
+    
+            .ticket{
+                img{
+                    width: 43px;
+                }
+                span{
+                    padding: 0 12px;
+                    text-align: center;
+                    line-height: 14px;
+                }
+            }
+            .ticket2{
+                img{
+                    margin-top: 10px;
+                }
+            }
+            .avtive {
+                background-color: gold;
+                margin-top: 0.2rem;
+                box-shadow: 0 0.12rem 0 0 goldenrod;
+            }
+        }
+    
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 90px;
+            padding: 0 34px;
+            span {
+                font-size: 0;
+                opacity: 0;
+                width: 134px;
+                height: 26px;
+            }
+        }
+    }
+}

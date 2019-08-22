@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="index">
+    <img class="bg" src="./img/index_bg.png" alt="">
+    <img src="./img/fff.png" alt="" class="bg_foot">
+    <div class="main">
+        <!-- 花卡 -->
+        <div class="flower">
+            <a href="https://rwk.cmicrwx.cn/rwx/rwkvue/young/#/?channelId=C10000015712">立即订购</a>
+            <span class="toCheck">马上抽奖</span>
+        </div>
+        <!-- 15G流量 -->
+        <div class="flow15G">
+            <a href="https://dev.10086.cn/rwx/rwkvue/mangGuoFMFWeb/?channelId=C10000004572&channelSeqId=mguoshoumian4511&pageType=MANGGUOFMFWAP">立即订购</a>
+        </div>
+        <div class="footer">
+            <span class="rule">活动规则</span>
+            <span class="myPrize">我的奖品</span>
+        </div>
+    </div>
+
+    <div class="pupop">
+        <!-- 抽奖验证 -->
+        <div class="nor check">
+            <img src="./../img/bgH240.png" alt="" class="bbg">
+            <p>
+                输入您的抽奖凭证
+            </p>
+            <div class="input">
+                <input type="text" placeholder="输入您的办理号码或联系人号码">
+            </div>
+            <img src="./../img/ok7.png" alt="" class="ok getCheckRes">
+            <img src="./../img/close.png" alt="" class="close">
+        </div>
+        <!-- 未办理 -->
+        <div class="nor p_notHava">
+            <img src="./../img/empty_bg.png" alt="" class="bbg">
+            <p>
+                亲，你还未办理宝藏卡哦，<br /> 快来办理吧
+            </p>
+            <img src="./../img/ok5.png" alt="" class="ok">
+            <img src="./../img/close.png" alt="" class="close">
+        </div>
+        <!-- 已抽奖 -->
+        <div class="nor p_got">
+            <img src="./../img/empty_bg.png" alt="" class="bbg">
+            <p>
+                亲，你已经抽过奖了。
+            </p>
+            <img src="./../img/ok6.png" alt="" class="ok">
+            <img src="./../img/close.png" alt="" class="close">
+        </div>
+        <!-- 规则 -->
+        <div class="p_rule">
+            <img src="./../img/rule_bg.png" alt="" class="bbg">
+            <p class="rule_docs" >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sierra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                naagnis dis parturient montes, nascetur ridiculus
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                naagnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate,
+                felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                naagnis dis parturient montes, nascetur ridiculus
+            </p>
+            <img src="./../img/ok1.png" alt="" class="ok">
+            <img src="./../img/close.png" alt="" class="close">
+        </div>
+        <!-- 我的奖品 -->
+        <div class="p_myLotto">
+            <img src="./../img/myPrize_bg.png" class="myLotto_bg">
+            <ul>
+                <li>
+                    <img src="./../img/prize1.png" alt="">
+                </li>
+                <li>
+                    <img src="./../img/prize2.png" alt="">
+                </li>
+                <li>
+                    <img src="./../img/prize3.png" alt="">
+                </li>
+            </ul>
+            <p>
+                若抽中牛奶盒子、门票等实物奖品，将在成功激活宝藏卡后发放；芒果会员以及快乐购满减券等奖品，将在订购成功后直接下发兑换券码至相应宝藏卡联系人手机号码。
+            </p>
+            <img src="./../img/ok4.png" alt="" class="ok">
+            <img src="./../img/close.png" alt="" class="close">
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+
+<script>
+    $(function () {
+        // 规则
+        $('.footer .rule').click(function () {
+            openPupop('p_rule')
+        })
+        // 我的奖品
+        $('.footer .myPrize').click(function () {
+            openPupop('p_myLotto')
+        })
+
+        // 校验抽奖资格
+        $('.toCheck').click(function(){
+            openPupop('check')
+        })
+
+
+        $('.getCheckRes').click(function () {
+            close()
+            // // 未办理
+            // openPupop('p_notHava')
+            // // 已抽奖
+            // openPupop('p_got')
+
+            // 测试代码
+            if (!window.aaa) {
+                window.aaa = 1
+            }
+            switch (window.aaa++) {
+                case 1:
+                    openPupop('p_notHava')
+                    break
+                case 2:
+                    openPupop('p_got')
+                    break
+                case 3:
+                    window.location.href = './pages/lotto.html'
+                    break
+            }
+
+        })
+        // 屏幕比较长的手机,底部添加背景图接上
+        var bg = document.querySelector(".bg").offsetHeight
+        var Wh = document.body.clientHeight
+        var height = Wh - bg
+        console.log('Wh', Wh, 'bg', bg, 'foot_height', height)
+        if (height > 0) {
+            if (height > 200) {
+                height = 200
+            }
+            $('.bg_foot').css('height', height)
+        }
+
+        // 关闭弹窗
+        $('.close').click(function () {
+            close()
+        })
+
+        // 打开弹窗方法 @name 弹窗的className
+        function openPupop(name) {
+            $('.pupop').show()
+            $('.' + name).show()
+        }
+
+        // 关闭弹窗方法
+        function close() {
+            $('.pupop').hide()
+            $('.pupop > div').hide()
+        }
+
+        // 弹窗时,禁止页面滚动
+        $('.pupop').on('touchmove', function (event) {
+            if(event.target.className.indexOf('rule_docs') == -1){
+                event.preventDefault()
+            }
+        })
+    })
+</script>
