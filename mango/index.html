@@ -10,7 +10,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="Cache" content="no-cache">
-    <title>Document</title>
+    <title>订购页</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -53,7 +53,7 @@
             <p>
                 亲，你还未办理宝藏卡哦，<br /> 快来办理吧
             </p>
-            <img src="./../img/ok5.png" alt="" class="ok">
+            <img src="./../img/ok5.png" alt="" class="ok getFlower">
             <img src="./../img/close.png" alt="" class="close">
         </div>
         <!-- 已抽奖 -->
@@ -62,7 +62,7 @@
             <p>
                 亲，你已经抽过奖了。
             </p>
-            <img src="./../img/ok6.png" alt="" class="ok">
+            <img src="./../img/ok6.png" alt="" class="ok myPrize">
             <img src="./../img/close.png" alt="" class="close">
         </div>
         <!-- 规则 -->
@@ -118,10 +118,14 @@
             openPupop('p_rule')
         })
         // 我的奖品
-        $('.footer .myPrize').click(function () {
+        $('.myPrize').click(function () {
+            close()
             openPupop('p_myLotto')
         })
 
+        $('.getFlower').click(function(){
+            window.location.href = 'https://rwk.cmicrwx.cn/rwx/rwkvue/young/#/?channelId=C10000015712'
+        })
         // 校验抽奖资格
         $('.toCheck').click(function(){
             openPupop('check')

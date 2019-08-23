@@ -10,7 +10,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="Cache" content="no-cache">
-    <title>Document</title>
+    <title>抽奖</title>
     <link rel="stylesheet" href="./../css/base.css">
     <link rel="stylesheet" href="./../css/style.css">
 </head>
@@ -178,7 +178,6 @@
          * */
         // 抽奖
         $('.main').on('click', '.open', function () {
-
             // 测试代码
             if (!window.aaa) {
                 window.aaa = 0
@@ -192,7 +191,7 @@
                     break
                 case 2:
                     lottoFn(2)
-                    window.aaa = -1
+                    window.aaa = 0
                     break
             }
         })
@@ -229,6 +228,7 @@
 
         // 抽奖的方法 @target 目标 j 旋转圈数
         function lottoFn(target, j = 2) {
+            console.log('target',target)
             var i = 0
             $('.main div')[0].classList.add('avtive')
             var narmal = setInterval(function () {
@@ -265,6 +265,7 @@
                 var enterLotto = setInterval(function () {
                     $('.main div').removeClass('avtive')
                         ++i
+                        // 改变转动的奖品格子
                     switch (i) {
                         case 3:
                             $('.main div')[5].classList.add('avtive')
@@ -291,6 +292,7 @@
                             1: 'p_emtpy',
                             2: 'p_milk',
                         }
+                        // 弹出中奖结果
                         setTimeout(() => {
                             openPupop(obj[target] || 'p_emtpy')
                         }, 500);
