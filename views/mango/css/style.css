@@ -97,6 +97,7 @@
   width: 0.5rem;
   height: 0.5rem;
   transform: translateX(-50%);
+  z-index: 10;
 }
 .pupop > div .small {
   display: block;
@@ -293,11 +294,10 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 100%;
+  width: 2rem;
   text-align: center;
   font-family: MicrosoftYaHei;
   font-size: 0.2rem;
-  letter-spacing: 0.02rem;
   color: #ea5504;
 }
 #lotto .content .main .ticket img {
