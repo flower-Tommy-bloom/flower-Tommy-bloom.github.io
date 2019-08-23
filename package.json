@@ -6,7 +6,7 @@
   "scripts": {
     "push": "concurrently \"npm run push1\" \"npm run push2\" \"npm run push3\" ",
     "push1":"git add .",
-    "push2":"git commit -m 'xxxx'",
+    "push2":"git commit -m '111'",
     "push3":"git push "
   },
   "author": "tom",
