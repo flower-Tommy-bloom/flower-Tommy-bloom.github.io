@@ -2,6 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    node: {
+        fs: "empty"
+    },
     entry: { //入口文件配置
         index: './src/js/index.js'
     },

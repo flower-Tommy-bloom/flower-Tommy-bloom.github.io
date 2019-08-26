@@ -1,0 +1,176 @@
+#index .bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, #C2200E 30%, #BA200F 100%);
+  z-index: -2;
+}
+#index ul,
+#index li,
+#index ol,
+#index dl,
+#index dd,
+#index dt,
+#index p,
+#index h1,
+#index h2,
+#index h3,
+#index h4,
+#index h5,
+#index h6,
+#index form,
+#index fieldset,
+#index legend,
+#index img,
+#index div,
+#index span,
+#index p,
+#index em,
+#index i,
+#index s,
+#index header,
+#index section,
+#index article,
+#index nav,
+#index footer {
+  font-size: 0.32rem;
+  font-family: PingFangSC-Regular;
+}
+#index .logo {
+  padding-top: 0.28rem;
+  margin: 0rem 0.3rem 0.52rem;
+  width: 3.32rem;
+  height: 0.5rem;
+  box-sizing: content-box;
+}
+#index .mid {
+  width: 5.7rem;
+  margin: 0 auto 0.54rem;
+}
+#index .main {
+  padding: 0 0.8rem;
+}
+#index .main form .item {
+  width: 5.9rem;
+  height: 0.96rem;
+  background: #FFF8EB;
+  border-radius: 0.48rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+#index .main form .item input {
+  flex: 1;
+  height: 100%;
+  padding-left: 0.48rem;
+  padding-right: .48rem;
+  color: #000;
+  font-size: 0.32rem;
+}
+#index .main form .item input::placeholder {
+  color: #999999;
+}
+#index .main form .code {
+  display: flex;
+  justify-content: space-between;
+}
+#index .main form .code .item {
+  width: 3.2rem;
+}
+#index .main .btn {
+  width: 2.4rem;
+  height: 0.96rem;
+  border-radius: 0.48rem;
+  text-align: center;
+  color: #F2D592;
+  line-height: 0.88rem;
+  font-family: PingFangSC-Medium;
+  border: 0.04rem solid #F2D592;
+}
+#index .main .submit {
+  width: 5.9rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  border: none;
+  background-image: linear-gradient(0deg, #D2A95E 0%, #F7DC9B 100%);
+  border-radius: 0.48rem;
+  font-family: PingFangSC-Semibold;
+  font-size: 0.4rem;
+  color: #BA200F;
+  font-weight: bold;
+  text-align: center;
+}
+#index .main .more {
+  margin-top: 0.2rem;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #EBCB87;
+  padding-bottom: 1.6rem;
+}
+#index .pupop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#index .pupop > div {
+  display: none;
+  margin: 3.78rem auto 0;
+  width: 5.1rem;
+  border: 0.02rem solid #f2e1c3;
+  border-radius: 0.3rem;
+  position: relative;
+  background-color: #fff;
+}
+#index .pupop > div .tipsLogo {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0.6rem auto 0.3rem;
+}
+#index .pupop > div::before {
+  position: absolute;
+  left: -0.2rem;
+  top: -0.2rem;
+  right: -0.2rem;
+  bottom: -0.2rem;
+  content: "";
+  border: 0.02rem solid #f2e1c3;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  z-index: -1;
+}
+#index .pupop > div h4 {
+  color: #d2aa60;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+#index .pupop > div p {
+  padding: 0.4rem 0 1rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #7e7c7a;
+}
+#index .pupop > div .ok {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.48rem;
+  width: 4rem;
+  height: 0.96rem;
+  background-image: linear-gradient(0deg, #D2A95E 0%, #F7DC9B 100%);
+  border-radius: 0.48rem;
+  line-height: 0.96rem;
+  font-family: PingFangSC-Semibold;
+  font-size: 0.4rem;
+  color: #BA200F;
+  font-weight: bold;
+  text-align: center;
+}

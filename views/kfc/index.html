@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="index">
+    <div class="bg"></div>
+    <img src="./img/logo.png" alt="" class="logo">
+    <img src="./img/main_img.png" alt="" class="mid">
+    <div class="main">
+        <form>
+            <div class="item">
+                <input type="text" placeholder="请输入手机号">
+            </div>
+            <div class="code">
+                <div class="item">
+                    <input type="text" placeholder="请输入验证码">
+                </div>
+                <div class="btn getCode">获取验证码</div>
+            </div>
+        </form>
+        <div class="btn submit">领取大神卡</div>
+        <p class="more">大神卡将会绑定您输入的手机号</p>
+    </div>
+    <div class="pupop">
+        <!-- 成功 -->
+        <div class="success">
+            <img src="./img/success.png" alt="" class="tipsLogo">
+            <h4>已提交申请</h4>
+            <p>请留意大神卡开通成功短信提示</p>
+            <div class="ok">确定</div>
+        </div>
+        <!-- 失败 -->
+        <div class="fail">
+            <img src="./img/fail.png" alt="" class="tipsLogo">
+            <h4>领取失败</h4>
+            <p>不符合领取条件</p>
+            <div class="ok">确定</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script>
+
+    $('.submit').click(function () {
+        // 两种弹窗
+        // openPupop('success')
+        // openPupop('fail')
+
+        if (!window.aaa) {
+            window.aaa = 0
+        }
+
+        if (window.aaa++ % 2 == 0) {
+            openPupop('success')
+        } else {
+            openPupop('fail')
+        }
+
+    })
+
+
+    $('.pupop').on('click', '.ok', function () {
+        closePupop()
+    })
+
+
+    // 获取验证码
+    var time = 60
+    $('.getCode').click(function(){
+        if(time !== 60){return}
+        $('.getCode').html(time +'s')
+        clearInterval(timeChange)
+        var timeChange = setInterval(function(){
+            $('.getCode').html(--time +'s')
+            if(time < 1){
+                time = 60
+                clearInterval(timeChange)
+                $('.getCode').html('获取验证码')
+            }
+        },1000)
+    })
+
+    // 打开弹窗
+    function openPupop(name) {
+        $('.pupop').show()
+        $('.' + name).show()
+    }
+
+    // 关闭弹窗
+    function closePupop() {
+        $('.pupop').hide()
+        $('.pupop > div').hide()
+    }
+
+    // 弹窗时,禁止页面滚动
+    $('.pupop').on('touchmove', function (event) {
+        if (event.target.className.indexOf('rule_docs') == -1) {
+            event.preventDefault()
+        }
+    })
+</script>
