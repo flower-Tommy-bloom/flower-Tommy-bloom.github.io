@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="index">
+    <!-- <div class="bg">
+        <img src="./img/1.png" alt="" class="part1">
+        <img src="./img/2.png" alt="" class="part2">
+        <img src="./img/3.png" alt="" class="part3">
+    </div> -->
+    <div class="bg"></div>
+    <div class="main">
+        <form>
+            <div class="item">
+                <input type="text" placeholder="请输入手机号码">
+            </div>
+            <div class="item">
+                <input type="text" placeholder="请输入短信验证码">
+                <div class="getCode">发送验证码</div>
+            </div>
+        </form>
+        <div class="submit">立即抢购</div>
+        <p class="rule" href="javascript:;">点击查看订购规则>></p>
+    </div>
+    <div class="pupop">
+        <div class="rule_docs">
+            <h2>订购规则</h2>
+            <img src="./img/close.png" alt="" class="close">
+            <p class="content">
+                <span class="title">流量使用范围说明</span>
+                1、建议成功订购流量包的用户，进行以下操作可享受最佳的免流体验：
+                <br />1、建议成功订购流量包的用户，进行以下操作可享受最佳的免流体验：
+                <br />(1)升级百度App至V10.7及以上版本。
+                <br />(2)升级爱奇艺至V9.10.0及以上版本。
+                <br />2、针对上述App不包含在“定向流量”内的适用范围，特别说明如下：
+                <br />(1)在爱奇艺App内播放、下载第三方视频；浏览H5页面及播放、下载H5页面内视频；阅读小说、漫画等内容；观看第三方提供的广告、使用第三方提供的应用下载等服务。
+                <br />(2)所有百度系App内的第三方提供的网页、视频、图片、广 告 、应用下载等服务，例如手机新闻网、搜狗、携程、京东等非百度业务。
+                <br />(3)百度App内除小说外的所有频道（右上角）及第三方小说；个性化资讯推荐版块的动漫、逛逛、畅听；通过搜索打开的所有网页内容；个人中心内的小程序。
+                <br />(4)百度贴吧App内的直播、第三方链接等。
+                <br />(5)百度地图App内的共享单车、车主服务等板块。
+                <br />(6)好看视频App内的离线下载。
+                <br />(7)百度翻译App内的小工具。
+                <br />(8)百度输入法App内的卡片搜索、精品推荐应用下载、内置浏览器等。
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script>
+    $(function () {
+        /**
+         * 背景分为了三部分,中间部分做拉伸,根据屏幕高度,动态设置中间部分的高度
+         * */
+        // var bodyH = document.querySelector("body").offsetHeight
+        // var part1 = document.querySelector(".bg .part1").offsetHeight || 366
+        // var part3 = document.querySelector(".bg .part3").offsetHeight || 180
+        // console.log('bodyH', bodyH, 'part1', part1, 'part3', part3, 'part2', bodyH - part1 - part3)
+        // $('.part2').css('height', bodyH - part1 - part3)
+        // $('.part2').css('height', 400 + 'px')
+
+        // 弹窗时,禁止页面滚动
+        $('.pupop').on('touchmove', function (event) {
+            console.log(event.target.className)
+            if (event.target.className.indexOf('content') == -1) {
+                event.preventDefault()
+            }
+        })
+
+        $('.rule').click(function () {
+            openPupop('rule_docs')
+        })
+
+        $('.close').click(function () {
+            closePupop()
+        })
+
+        function openPupop(name) {
+            $('.pupop > div').hide()
+            $('.pupop').show()
+            $('.' + name).show()
+        }
+
+        function closePupop() {
+            $('.pupop').hide()
+            $('.pupop > div').hide()
+        }
+    })
+</script>

@@ -1,0 +1,124 @@
+#index .main {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#index .bg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  background: url('../img/bg.png') no-repeat left bottom;
+  background-size: 100%;
+  z-index: -1;
+}
+#index form {
+  padding-top: 12.2rem;
+  background: url('../img/bg.png') no-repeat;
+  background-size: 100%;
+}
+#index form .item {
+  margin: 0 auto 0.36rem;
+  width: 6.64rem;
+  height: 1rem;
+  background: #f0eaea;
+  border-radius: 0.12rem;
+  font-size: 0.32rem;
+  position: relative;
+}
+#index form .item input {
+  width: 100%;
+  height: 100%;
+  color: #382823;
+  padding-left: 0.32rem;
+}
+#index form .item .getCode {
+  position: absolute;
+  top: 50%;
+  right: 0.16rem;
+  transform: translateY(-50%);
+  width: 1.84rem;
+  height: 0.68rem;
+  background: #e1569a;
+  border-radius: 0.34rem;
+  font-size: 0.28rem;
+  text-align: center;
+  line-height: 0.68rem;
+  color: #fff;
+}
+#index .submit {
+  width: 6.64rem;
+  height: 1rem;
+  margin: 0 auto;
+  background: #e1569a;
+  border-radius: 0.12rem;
+  font-size: 0.36rem;
+  font-family: HYQiHei;
+  font-weight: normal;
+  color: #f0eaea;
+  line-height: 1rem;
+  text-align: center;
+  text-shadow: 0rem 0rem 0.54rem #e33e13;
+}
+#index .rule {
+  margin-top: 0.48rem;
+  font-size: 0.32rem;
+  font-family: HYQiHei;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: underline;
+  color: #ffffff;
+  padding-bottom: 2.16rem;
+}
+#index .pupop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+#index .pupop > div {
+  display: none;
+  width: 6.98rem;
+  height: 8rem;
+  margin: 2.36rem auto 0;
+  padding: 0.44rem 0.54rem 0.8rem 0.36rem;
+  background: #1a4379;
+  border: 0.06rem solid #2d62a8;
+  box-shadow: 0rem 0rem 0.5rem 0rem #12396c;
+  border-radius: 0.2rem;
+  position: relative;
+}
+#index .pupop > div h2 {
+  font-size: 0.36rem;
+  font-family: HYQiHei;
+  font-weight: normal;
+  color: #e0e0e0;
+  line-height: 0.34rem;
+  text-align: center;
+  padding-bottom: 0.56rem;
+}
+#index .pupop > div p {
+  height: 6rem;
+  overflow-y: scroll;
+  font-size: 0.28rem;
+  font-family: HYQiHei;
+  font-weight: normal;
+  color: #e0e0e0;
+}
+#index .pupop > div .title {
+  display: block;
+  font-size: 0.32rem;
+  padding-bottom: 0.2rem;
+}
+#index .pupop > div .close {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 0.36rem;
+  height: 0.36rem;
+}
