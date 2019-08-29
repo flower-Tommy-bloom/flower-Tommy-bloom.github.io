@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" /> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=8">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="service">
+<body id="service">
     <div class="notice">
         <span>公告</span>
         <p>公告公告公告公告公告公告公告</p>
@@ -60,9 +60,9 @@
             </li>
         </ul>
     </div>
-    <div class="serverEntryBtn">
+    <div class="serverEntryBtn" draggable="true">
         <span>在线客服</span>
-        <img src="./img/server_mm.png" alt="" class="service">
+        <img src="./img/server_mm.png" alt="">
     </div>
     <div class="pupop">
         <!-- 关联手机 -->
@@ -134,6 +134,26 @@
 <script src="./js/zepto.min.js"></script>
 <script src="./js/fn.js"></script>
 <script>
+    $('.serverEntryBtn').addClass('inside')
+    $('.serverEntryBtn').on('touchend',function(){
+        if($('.serverEntryBtn').hasClass('inside')){
+            $('.serverEntryBtn').removeClass('inside').addClass('outside')
+        }else{
+            $('.serverEntryBtn').removeClass('outside').addClass('inside')
+        }
+    })
+    // tab切换
+    $('.tab > span').click(function () {
+        if ($(this).index() === 0) {
+            $('.tab .left').css('background', "url('./../img/flower_bg.png')");
+            $('.tab .right').css('background', "url('./../img/baozang_bg.png')");
+            $('.tab span').css('background-size', "100% 100%");
+        } else {
+            $('.tab .left').css('background', "url('./../img/flower_bg_off.png')");
+            $('.tab .right').css('background', "url('./../img/baozang_bg_light.png')");
+            $('.tab span').css('background-size', "100% 100%");
+        }
+    })
     // 公告页跳转
     $('.notice').click(function () {
         window.location.href = './pages/notice.html'
@@ -159,7 +179,7 @@
 
     })
     // 绑定花卡
-    $('.toLink').click(function(){
+    $('.toLink').click(function () {
         window.location.href = './pages/relevance.html'
     })
     // 联系客服
@@ -184,7 +204,7 @@
         });
     })
     // 跳转到搜索
-    $('.searchBtn span').click(function(){
+    $('.searchBtn span').click(function () {
         window.location.href = './pages/search.html'
     })
     // 关闭弹窗

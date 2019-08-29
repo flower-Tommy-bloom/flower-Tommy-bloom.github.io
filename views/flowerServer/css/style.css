@@ -5,14 +5,14 @@
 body {
   font-size: 0.28rem;
 }
-.service .notice {
+#service .notice {
   height: 0.8rem;
   padding: 0 0.334rem;
   display: flex;
   align-items: center;
   border-bottom: 0.01rem solid #C0C0C0;
 }
-.service .notice span {
+#service .notice span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,47 +23,47 @@ body {
   background: #FFAB07;
   color: #fff;
 }
-.service .notice p {
+#service .notice p {
   font-family: PingFangSC-Regular;
   font-size: 0.28rem;
   color: #333333;
   letter-spacing: 0;
 }
-.service .tab {
+#service .tab {
   margin: 0.334rem 0;
   height: 0.86rem;
   position: relative;
 }
-.service .tab span {
+#service .tab span {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 3.5rem;
   height: 0.86rem;
-  background: url('../img/flower_bg.png') no-repeat;
+  background: url('../img/flower_bg_off.png') no-repeat;
   background-size: 100%;
   font-family: PingFangSC-Semibold;
   font-size: 0.28rem;
   color: #fff;
 }
-.service .tab .left {
+#service .tab .left {
   position: absolute;
   top: 0;
   left: 0.334rem;
 }
-.service .tab .right {
+#service .tab .right {
   position: absolute;
   top: 0;
   right: 0.334rem;
-  background: url('../img/baozang_bg.png') no-repeat;
+  background: url('../img/baozang_bg_light.png') no-repeat;
   background-size: 100%;
 }
-.service .search {
+#service .search {
   padding: 0 0.334rem;
   display: flex;
   justify-content: space-between;
 }
-.service .search h3 {
+#service .search h3 {
   font-family: PingFangSC-Semibold;
   font-size: 0.3rem;
   font-weight: 600;
@@ -72,29 +72,29 @@ body {
   padding-left: 0.2rem;
   border-left: 0.052rem solid #00a5ff;
 }
-.service .search .searchBtn {
+#service .search .searchBtn {
   display: flex;
   align-items: center;
 }
-.service .search .searchBtn img {
+#service .search .searchBtn img {
   width: 0.334rem;
   height: 0.336rem;
 }
-.service .search .searchBtn span {
+#service .search .searchBtn span {
   font-family: PingFangSC-Regular;
   font-size: 0.294rem;
   color: #999999;
   letter-spacing: 0.02rem;
   margin-left: 0.12rem;
 }
-.service .tips {
+#service .tips {
   padding: 0 0.334rem 0.14rem;
 }
-.service .tips ul {
+#service .tips ul {
   display: flex;
   flex-wrap: wrap;
 }
-.service .tips ul li {
+#service .tips ul li {
   width: 1.92rem;
   height: 0.56rem;
   margin-top: 0.332rem;
@@ -109,23 +109,23 @@ body {
   color: #b8b8b8;
   letter-spacing: 0.0182rem;
 }
-.service .tips ul li:nth-child(3n) {
+#service .tips ul li:nth-child(3n) {
   margin-right: 0;
 }
-.service .tips ul .active {
+#service .tips ul .active {
   color: #40c4fe;
   border: 0.01rem solid #40c4fe;
 }
-.service .question ul li {
+#service .question ul li {
   padding: 0 0.334rem;
   border-bottom: 0.01rem solid #C0C0C0;
 }
-.service .question ul li article {
+#service .question ul li article {
   height: 0.9rem;
   line-height: 0.9rem;
   position: relative;
 }
-.service .question ul li article img {
+#service .question ul li article img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -135,7 +135,7 @@ body {
   transition-property: transform;
   transition-duration: .3s;
 }
-.service .question ul li section {
+#service .question ul li section {
   overflow: hidden;
   height: 0;
   font-family: PingFangSC-Regular;
@@ -146,21 +146,21 @@ body {
   transition-property: height;
   transition-duration: .3s;
 }
-.service .question ul li .active {
+#service .question ul li .active {
   height: auto;
 }
-.service .serverEntryBtn {
+#service .serverEntryBtn {
   position: fixed;
   right: 0.32rem;
   bottom: 0.52rem;
   width: 1.2rem;
   height: 1.2rem;
 }
-.service .serverEntryBtn img {
+#service .serverEntryBtn img {
   width: 100%;
   height: 100%;
 }
-.service .serverEntryBtn span {
+#service .serverEntryBtn span {
   position: absolute;
   left: 50%;
   bottom: 0.1rem;
@@ -171,6 +171,59 @@ body {
   font-size: 0.24rem;
   color: #FFFFFF;
   letter-spacing: 0.011rem;
+}
+#service .inside {
+  right: -0.6rem;
+  animation: insides 1s,big 1s infinite alternate;
+}
+#service .outside {
+  right: .32rem;
+  animation: outsides 1s;
+}
+/* Standard syntax */
+@keyframes big {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes insides {
+  0% {
+    right: 0.32rem;
+  }
+  100% {
+    right: -0.6rem;
+  }
+}
+/* Standard syntax */
+@keyframes insides {
+  0% {
+    right: 0.32rem;
+  }
+  100% {
+    right: -0.6rem;
+  }
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes outsides {
+  0% {
+    right: -0.6rem;
+  }
+  100% {
+    right: 0.32rem;
+  }
+}
+/* Standard syntax */
+@keyframes outsides {
+  0% {
+    right: -0.6rem;
+  }
+  100% {
+    right: 0.32rem;
+  }
 }
 #notice .header {
   height: 0.8rem;

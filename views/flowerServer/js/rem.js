@@ -1,7 +1,7 @@
 (function(win, designW) {
 	var doc = win.document;
 	var docEle = doc.documentElement;
-	designW = designW || 720; //设计稿宽度px,默认640px设计稿
+	designW = designW || 750; //设计稿宽度px,默认640px设计稿
 	var ratio = designW / 100;//640px=> 1rem = 100px, 超出640px font-size：100px;
 	var or = "orientationchange" in win ? "orientationchange" : "resize";
 	//创建viewport	
