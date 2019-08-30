@@ -1,22 +1,18 @@
 #index .main {
   width: 100%;
   position: absolute;
-  z-index: 1;
 }
 #index .bg {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: absolute;
+}
+#index .bg img {
   width: 100%;
-  height: 8rem;
-  background: url('../img/bg.png') no-repeat left bottom;
-  background-size: 100%;
-  z-index: -1;
+}
+#index .bg .part2 {
+  height: 100%;
 }
 #index form {
   padding-top: 12.2rem;
-  background: url('../img/bg.png') no-repeat;
-  background-size: 100%;
 }
 #index form .item {
   margin: 0 auto 0.36rem;
@@ -32,6 +28,7 @@
   height: 100%;
   color: #382823;
   padding-left: 0.32rem;
+  font-size: 0.32rem;
 }
 #index form .item .getCode {
   position: absolute;
@@ -40,6 +37,7 @@
   transform: translateY(-50%);
   width: 1.84rem;
   height: 0.68rem;
+  font-family: HYQiHei;
   background: #e1569a;
   border-radius: 0.34rem;
   font-size: 0.28rem;
@@ -68,7 +66,7 @@
   font-weight: normal;
   text-align: center;
   text-decoration: underline;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   padding-bottom: 2.16rem;
 }
 #index .pupop {
@@ -109,6 +107,7 @@
   font-family: HYQiHei;
   font-weight: normal;
   color: #e0e0e0;
+  line-height: 0.4rem;
 }
 #index .pupop > div .title {
   display: block;
