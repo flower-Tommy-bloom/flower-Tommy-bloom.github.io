@@ -1,0 +1,69 @@
+#index {
+  background: url('../img/header.jpg') no-repeat;
+  background-size: 100%;
+  background-color: #0b0306;
+}
+#index .main .btn {
+  width: 2.82rem;
+  height: 0.42rem;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #f9e6b0, #cf9616);
+  box-shadow: 0 0  0.05rem 0.01rem #dfb552;
+  border-radius: 0.2rem;
+  font-size: 0.17rem;
+  text-align: center;
+  font-family: FZLTHK;
+  font-weight: bold;
+  line-height: 0.42rem;
+  color: #170f0e;
+}
+#index .main .submit {
+  margin-top: 5.36rem;
+}
+#index .main .tips {
+  display: block;
+  text-align: center;
+  margin: 0.1rem 0 ;
+  font-size: 0.1rem;
+  font-family: FZLTHK;
+  font-weight: normal;
+  color: #8b8b8b;
+}
+#index .main .flv {
+  width: 3.65rem;
+  background: url('../img/flv_bg.png') no-repeat;
+  background-size: 100%;
+  margin-left: 0.25rem;
+  text-align: center;
+  position: relative;
+}
+#index .main .flv video {
+  width: 3.44rem;
+  height: 1.75rem;
+  margin-top: 0.12rem;
+}
+#index .main .flv .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.06rem;
+}
+#index .main ul li .title {
+  width: 2.46rem;
+  margin: 0 auto;
+}
+#index .main ul li p {
+  text-align: center;
+  font-size: 0.12rem;
+  font-family: FZLTHK;
+  font-weight: normal;
+  text-decoration: underline;
+  color: #ffffff;
+  padding-bottom: 0.22rem;
+}
+#index .main footer {
+  background: url('../img/footer.jpg') no-repeat;
+  background-size: 100%;
+  height: 1.2rem;
+}
