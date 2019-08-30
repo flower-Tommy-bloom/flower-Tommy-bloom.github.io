@@ -23,29 +23,46 @@
             中国队赢了，点这里抽福袋！
         </div>
         <span class="tips">*只有中国队赢球才能领取</span>
-        <div class="flv">
-            <video src="./img/flv.mp4" poster="./img/banner1.jpg" preload="auto" οnended="video()"></video>
+        <div class="flv flv1">
+            <a
+                href="http://m.miguvideo.com/mgs/msite/prd/index.html?pageId=edc84e93da5d46049fd2ce5d62e21351&plt=sub"></a>
             <img src="./img/play.png" class="play">
         </div>
         <ul>
             <li>
                 <img src="./img/title.png" class="title">
-                <p>来咪咕，助力中国篮球！会员限时1元抢</p>
-                <div class="flv">
-                    <video src="./img/flv.mp4" poster="./img/banner2.jpg" preload="auto"></video>
+                <a href="http://s.miguvideo.com/2immAbY">免广告看高清，看球更尽兴，立即申请！</a>
+                <div class="flv flv2">
+                    <a href="http://m.miguvideo.com/mgs/msite/prd/detail.html?cid=661249836"></a>
                     <img src="./img/play.png" class="play">
                 </div>
             </li>
             <li>
                 <img src="./img/title.png" class="title">
-                <p>免广告看高清，看球更尽兴，立即申请！</p>
-                <div class="flv">
-                    <video src="./img/flv.mp4" poster="./img/banner3.jpg" preload="auto"></video>
+                <a href="http://s.miguvideo.com/2immAbY">免广告看高清，看球更尽兴，立即申请！</a>
+                <div class="flv flv3">
+                    <a href="http://m.miguvideo.com/mgs/msite/prd/detail.html?cid=661249836"></a>
                     <img src="./img/play.png" class="play">
                 </div>
             </li>
         </ul>
         <footer></footer>
+    </div>
+    <div class="pupop">
+        <div class="flux">
+            <div class="title">恭喜您！</div>
+            <div class="content">抽中<span>“通用流量1G4小时”</span>流量包一个!</div>
+            <p class="docs">请留意10086短信下发，可以在“广东移动app”查询流量到账情况</p>
+            <div class="btn close">为中国队加油！</div>
+        </div>
+        <div class="migu">
+            <div class="title">恭喜您！</div>
+            <div class="content">抽中<span>“咪咕7天会员”</span>体验包一个！ </div>
+            <p class="docs">请点击：<a
+                    href="http://m.miguvideo.com/mgs/common/miguPromotion/prd/provinceRouter.html?pageId=6be651d4f230404c90be1c678e56eb4b&mver=stable_version&platform=PLATFORM">领取链接</a>
+            </p>
+            <div class="btn close ">为中国队加油！</div>
+        </div>
     </div>
 </body>
 
@@ -53,14 +70,44 @@
 <script src="./js/rem.js"></script>
 <script src="./js/zepto.min.js"></script>
 <script>
-    // 打开视频
-    $('.main').on('click', '.play', function () {
-        $(this).hide()
-        $(this).parents().children('video')[0].play();
+
+    $('.play').click(function () {
+        $(this).parents().children('a').click()
     })
-    // 打开视频
-    $('.main').on('click', 'video', function () {
-        $(this)[0].play();
-        $(this).parents().children('.play').hide()
+
+    $('.submit').click(function () {
+
+        // openPupop('flux')
+        // openPupop('migu')
+        // 测试代码
+        if (!window.aaa) {
+            window.aaa = 1
+        }
+        if (window.aaa++ % 2 == 0) {
+            openPupop('flux')
+
+        } else {
+            openPupop('migu')
+        }
+    })
+
+    $('.close').click(function () {
+        closePupop()
+    })
+
+    function openPupop(name) {
+        $('.pupop > div').hide()
+        $('.pupop').show()
+        $('.' + name).show()
+    }
+
+    function closePupop() {
+        $('.pupop').hide()
+        $('.pupop > div').hide()
+    }
+
+    // 弹窗时,禁止页面滚动
+    $('.pupop').on('touchmove', function (event) {
+        event.preventDefault()
     })
 </script>

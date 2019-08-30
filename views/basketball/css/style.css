@@ -3,12 +3,12 @@
   background-size: 100%;
   background-color: #0b0306;
 }
-#index .main .btn {
+#index .btn {
   width: 2.82rem;
   height: 0.42rem;
   margin: 0 auto;
   background: linear-gradient(90deg, #f9e6b0, #cf9616);
-  box-shadow: 0 0  0.05rem 0.01rem #dfb552;
+  box-shadow: 0 0 0.05rem 0.01rem #dfb552;
   border-radius: 0.2rem;
   font-size: 0.17rem;
   text-align: center;
@@ -23,7 +23,7 @@
 #index .main .tips {
   display: block;
   text-align: center;
-  margin: 0.1rem 0 ;
+  margin: 0.1rem 0;
   font-size: 0.1rem;
   font-family: FZLTHK;
   font-weight: normal;
@@ -37,9 +37,12 @@
   text-align: center;
   position: relative;
 }
-#index .main .flv video {
+#index .main .flv > a {
+  display: inline-block;
   width: 3.44rem;
   height: 1.75rem;
+  background: url('../img/banner1.jpg') no-repeat;
+  background-size: 100%;
   margin-top: 0.12rem;
 }
 #index .main .flv .play {
@@ -48,12 +51,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1.06rem;
+  z-index: 0;
+}
+#index .main .flv2 > a {
+  background: url('../img/banner2.jpg') no-repeat;
+  background-size: 100%;
+}
+#index .main .flv3 > a {
+  background: url('../img/banner3.jpg') no-repeat;
+  background-size: 100%;
 }
 #index .main ul li .title {
   width: 2.46rem;
   margin: 0 auto;
 }
-#index .main ul li p {
+#index .main ul li > a {
+  display: block;
   text-align: center;
   font-size: 0.12rem;
   font-family: FZLTHK;
@@ -66,4 +79,47 @@
   background: url('../img/footer.jpg') no-repeat;
   background-size: 100%;
   height: 1.2rem;
+}
+#index .pupop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+#index .pupop > div {
+  display: none;
+  width: 3.19rem;
+  margin: 2rem auto 0;
+  background: #5b1c2b;
+  border: 0.01rem solid #d1b73d;
+  border-radius: 0.05rem;
+  font-size: 0.12rem;
+  font-family: FZLTHK;
+  color: #FFFFFF;
+  text-align: center;
+}
+#index .pupop > div .title {
+  margin: 0.3rem auto 0.17rem;
+  text-align: center;
+  font-size: 0.21rem;
+  color: #ffea00;
+}
+#index .pupop > div span {
+  color: #FFEA00;
+}
+#index .pupop > div .docs {
+  margin: 0.12rem 0.16rem ;
+}
+#index .pupop > div .btn {
+  width: 2.04rem;
+  box-shadow: none;
+  margin: 0.27rem auto 0.22rem;
+}
+#index .pupop > div a {
+  color: #fff;
+  text-decoration: underline;
 }
