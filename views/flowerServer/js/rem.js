@@ -6,10 +6,7 @@
 	var or = "orientationchange" in win ? "orientationchange" : "resize";
 	//创建viewport	
 	_createViewport();
-	if(doc.addEventListener){
-		win.addEventListener(or, _refreshRem, false);
-		doc.addEventListener("DOMContentLoaded", _refreshRem, false);
-	}
+	_refreshRem()
 	/**
 	 * 创建viewport
 	 */
@@ -25,7 +22,6 @@
 	 * 动态更新rem
 	 */
 	function _refreshRem() {
-		console.log('test');
 		var clientW = docEle.clientWidth || 320;
 		//设置最大和最小宽度取值
 		if(clientW > designW){

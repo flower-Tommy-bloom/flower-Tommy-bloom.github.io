@@ -134,66 +134,64 @@
 <script src="./js/zepto.min.js"></script>
 <script src="./js/fn.js"></script>
 <script>
-    // 拖拽的方法
-    (function($){
-        var w = Number($('.serverEntryBtn').css("right").replace('px', ''))
-        var h = Number($('.serverEntryBtn').css("bottom").replace('px', ''))
-        var nowClient = {
-            x: 0,
-            y: 0
+    var nowClient = {x:0,y:0}
+    var coord = ''
+    function handleTouchend(e) { // 拖拽结束
+        // 清除拖拽样式
+        let element = e.changedTouches[0] // 记录初始 client 位置，用于计算移动距离
+        kefu.style.cssText = `right:unset;bottom:unset;left:${element.clientX}px;top:${element.clientY}px`
+        coord = `;left:${element.clientX}px;top:${element.clientY}px;`
+        console.log(element.clientX,element.clientY,'element')
+        nowClient = {
+            x: element.clientX,
+            y: element.clientY,
         }
-        var coord = ''
-        // 拖拽结束
-        function handleTouchend(e) {
-            // 清除拖拽样式
-            let element = e.changedTouches[0]
-            kefu.style.cssText = `right:unset;bottom:unset;left:${element.clientX - w}px;top:${element.clientY - h}px`
-            coord = `;left:${element.clientX}px;top:${element.clientY}px;`
-            nowClient = {
-                x: element.clientX + w,
-                y: element.clientY + h,
-            }
-        }
-        // 拖拽中
-        function handleTouchmove(e) {
-            let element = e.targetTouches[0]
-            // 根据初始 client 位置计算移动距离
-            let x = element.clientX - nowClient.x
-            let y = element.clientY - nowClient.y
+    }
 
-            // 移动当前元素
-            kefu.style.cssText = `transform: translate(${x}px, ${y}px);${coord}`
-        }
+    function handleTouchmove(e) { // 拖拽中
+        let element = e.targetTouches[0]
+        // 根据初始 client 位置计算移动距离
+        let x = element.clientX - nowClient.x
+        let y = element.clientY - nowClient.y
 
-        var kefu = document.querySelector('.serverEntryBtn')
+        // 移动当前元素
+        kefu.style.cssText = `transform: translate(${x}px, ${y}px);${coord}`
+    }
 
-        kefu.ontouchstart = (e) => {
-            handleTouchstart(e)
-        }
-        kefu.ontouchmove = (e) => {
-            handleTouchmove(e)
-            e.preventDefault()
-        }
+    var kefu = document.querySelector('.serverEntryBtn')
+    var service = document.querySelector('#service')
+    service.ontouchmove =  (e) => {
+        e.stopPropagation()
+    }
+    kefu.ontouchstart = (e) => {
+        handleTouchstart(e)
+    }
+    kefu.ontouchmove =  (e) => {
+        handleTouchmove(e)
+    }
 
-        kefu.ontouchend = (e) => {
-            handleTouchend(e)
+    kefu.ontouchend = (e) =>{
+        handleTouchend(e)
+    }
+    function handleTouchstart(e) { // 开始拖拽
+        if(nowClient.x != 0 && nowClient.y != 0)return
+        let element = e.targetTouches[0] // 记录初始 client 位置，用于计算移动距离
+        nowClient = {
+            x: element.clientX,
+            y: element.clientY
         }
-        // 开始拖拽
-        function handleTouchstart(e) {
-            if (nowClient.x != 0 && nowClient.y != 0) return
-            let element = e.targetTouches[0]
-            nowClient = {
-                x: element.clientX - w / 2,
-                y: element.clientY - h / 2
-            }
-        }
-    })($)
+        console.log('一开始',nowClient)
+    }
 
+    $('#service').on('touchmove', function (event) {
+        event.preventDefault()
+    })
 
     // tab切换
     $('.tab > span').click(function () {
         if ($(this).index() === 0) {
             $('.tab .left').css('background', "url('./../img/flower_bg.png')");
+            // $('.tab .left').css('background-size',"100%");
             $('.tab .right').css('background', "url('./../img/baozang_bg.png')");
             $('.tab span').css('background-size', "100% 100%");
         } else {
