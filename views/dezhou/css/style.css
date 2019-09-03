@@ -1,0 +1,357 @@
+body {
+  font-family: FZLTHJW--GB1-0;
+  font-size: 0.24rem;
+  letter-spacing: 0.01rem;
+}
+header {
+  width: 100%;
+  height: 3.75rem;
+}
+header img {
+  width: 100%;
+  height: 100%;
+}
+.search {
+  position: relative;
+  width: 5.5rem;
+  height: 0.64rem;
+  margin: 0.18rem auto 0.3rem;
+  background-color: #ffffff;
+  border-radius: 0.32rem;
+  border: solid 0.02rem #7ecef4;
+}
+.search img {
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  transform: translateY(-50%);
+  width: 0.33rem;
+  height: 0.33rem;
+}
+.search input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.34rem;
+  font-family: MicrosoftYaHei;
+  font-size: 0.24rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0.45rem;
+  letter-spacing: 0rem;
+}
+.list ul,
+.singleList ul {
+  margin: 0 .14rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list ul li,
+.singleList ul li {
+  margin-right: 1%;
+  width: 3.48rem;
+}
+.list ul li:nth-child(2n),
+.singleList ul li:nth-child(2n) {
+  margin-right: 0;
+}
+.list ul li .top,
+.singleList ul li .top {
+  position: relative;
+  border: solid 0.02rem #00a8ff;
+  height: 2.62rem;
+  border-radius: .06rem;
+}
+.list ul li .top .pause-icon,
+.singleList ul li .top .pause-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('../img/pause.png') no-repeat;
+  background-size: 100%;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+.list ul li .top img,
+.singleList ul li .top img {
+  width: 100%;
+  height: 100%;
+}
+.list ul li .top video,
+.singleList ul li .top video {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: fill;
+  z-index: 11;
+  cursor: pointer;
+}
+.list ul li .top .corner,
+.singleList ul li .top .corner {
+  position: absolute;
+  top: -0.05rem;
+  left: -0.05rem;
+  width: 0.76rem;
+  height: 0.76rem;
+}
+.list ul li .top .corner img,
+.singleList ul li .top .corner img {
+  width: 100%;
+}
+.list ul li .top .corner p,
+.singleList ul li .top .corner p {
+  position: absolute;
+  transform: rotateZ(-45deg);
+  display: block;
+  top: 0.11rem;
+  left: 0.06rem;
+  font-size: 0.16rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list ul li .top .corner p span,
+.singleList ul li .top .corner p span {
+  font-size: 0.2rem;
+}
+.list ul li .top > p,
+.singleList ul li .top > p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.49rem;
+  padding-left: 0.14rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  line-height: 0.49rem;
+  overflow: hidden;
+  /*超出部分隐藏*/
+  text-overflow: ellipsis;
+  /* 超出部分显示省略号 */
+  white-space: nowrap;
+  /*规定段落中的文本不进行换行 */
+}
+.list ul li .down,
+.singleList ul li .down {
+  margin: 0.16rem 0 0.38rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list ul li .down p,
+.singleList ul li .down p {
+  line-height: 0.3rem;
+  color: #4d4c4c;
+}
+.list ul li .down em,
+.singleList ul li .down em {
+  display: block;
+  width: 1.28rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  text-align: center;
+  background-image: linear-gradient(0deg, #099add 0%, #2dbcff 100%);
+  border-radius: 0.2rem;
+  color: #ffffff;
+}
+.list .btn,
+.singleList .btn {
+  width: 100%;
+  padding: 0.15rem 0 0;
+  padding-bottom: .64rem;
+  text-align: center;
+  font-size: 0.32rem;
+  line-height: 0.3rem;
+  letter-spacing: 0rem;
+  color: #656363;
+}
+#singleList {
+  display: none;
+}
+#singleList li {
+  width: 6.78rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+#singleList li .top {
+  height: 5.07rem;
+  border: solid 0.01rem #00a8ff;
+}
+#singleList li .top video {
+  width: 100%;
+}
+#singleList li .top .corner {
+  width: 1.47rem;
+  height: 1.47rem;
+}
+#singleList li .top .corner p {
+  top: 0.2rem;
+  left: 0.14rem;
+  font-size: 0.24rem;
+}
+#singleList li .top .corner p span {
+  font-size: 0.36rem;
+  padding-bottom: 0.06rem;
+}
+#singleList li .top > p {
+  width: 100%;
+  height: 0.77rem;
+  line-height: 0.77rem;
+  font-size: 0.36rem;
+  padding-left: 0.27rem;
+  color: #ffffff;
+}
+#singleList li .down {
+  margin-bottom: 0;
+  padding-bottom: .38rem;
+}
+#singleList li .down em {
+  width: 5.37rem;
+  height: 0.8rem;
+  margin: 0 auto;
+  line-height: 0.8rem;
+  background-image: linear-gradient(0deg, #0c9ddf 0%, #29b9fb 100%);
+  border-radius: 0.4rem;
+  font-size: 0.36rem;
+}
+.pupop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.pupop > div {
+  display: none;
+  width: 5.89rem;
+  margin: 5.51rem auto 0;
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  border: solid 0.04rem #00a8ff;
+  overflow: hidden;
+  position: relative;
+}
+.pupop > div img {
+  position: absolute;
+  top: 0.18rem;
+  right: 0.18rem;
+  width: 0.46rem;
+  height: 0.46rem;
+}
+.pupop > div p {
+  width: 4.8rem;
+  margin: 0.8rem auto .54rem;
+  text-align: center;
+  font-size: 0.28rem;
+  line-height: 0.36rem;
+}
+.pupop > div .enterBtn {
+  width: 3.15rem;
+  height: 0.8rem;
+  margin: 0 auto .6rem;
+  background-image: linear-gradient(0deg, #0c9ddf 0%, #29b9fb 100%);
+  border-radius: 0.4rem;
+  text-align: center;
+  line-height: 0.8rem;
+  font-size: 0.36rem;
+  color: #ffffff;
+}
+.pupop > div .btnGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .5rem .6rem;
+}
+.pupop > div .btnGroup span {
+  width: 2.2rem;
+  background-image: linear-gradient(0deg, #0c9ddf 0%, #29b9fb 100%);
+  border-radius: 0.4rem;
+  text-align: center;
+  line-height: 0.8rem;
+  font-size: 0.36rem;
+  color: #ffffff;
+}
+.pupop > div .btnGroup span:nth-child(1) {
+  background-image: none;
+  color: #0c9ddf;
+  border: 0.02rem solid #0c9ddf;
+}
+.pupop .detail {
+  width: 6.38rem;
+  margin-top: 2rem;
+  text-align: center;
+  padding-bottom: 1.06rem;
+}
+.pupop .detail p,
+.pupop .detail div {
+  text-align: left;
+}
+.pupop .detail p {
+  margin-top: 0.64rem;
+  font-family: FZLTHJW;
+  color: #333333;
+  margin-bottom: 0.24rem;
+}
+.pupop .detail .flv {
+  width: 4.74rem;
+  height: 3.02rem;
+  margin: 0 auto 0.2rem;
+  border: solid 0.02rem #00a8ff;
+  border-radius: .06rem;
+  padding: 0;
+  position: relative;
+}
+.pupop .detail .flv video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 11;
+  cursor: pointer;
+}
+.pupop .detail .flv .pause-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('../img/pause.png') no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+.pupop .detail .enterBtn {
+  width: 4.92rem;
+  height: 0.74rem;
+  border-radius: 0.36rem;
+  text-align: center;
+  line-height: 0.74rem;
+  margin-bottom: 0.3rem;
+}
+.pupop .detail .smallDocs {
+  padding: 0 0.6rem 0 0.66rem;
+  font-size: 0.22rem;
+  font-family: FZLTHJW;
+  font-weight: normal;
+  color: #494848;
+  line-height: 0.34rem;
+}
+.empty {
+  display: none;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.empty img {
+  display: inline-block;
+  width: 1.8rem;
+}

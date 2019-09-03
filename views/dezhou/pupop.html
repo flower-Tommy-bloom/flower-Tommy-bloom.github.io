@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="index">
+    <ul style="margin-top: 1rem">
+        <li style="height: 1rem;line-height: 1rem;">二次确认</li>
+        <li style="height: 1rem;line-height: 1rem;">立即开通</li>
+        <li style="height: 1rem;line-height: 1rem;">成功</li>
+        <li style="height: 1rem;line-height: 1rem;">失败</li>
+        <li style="height: 1rem;line-height: 1rem;">详情</li>
+    </ul>
+    <div class="pupop">
+        <!-- 二次确认 -->
+        <div class="tips">
+            <img class="close" src="./img/close.png" alt="">
+            <p>确认设置此视频为<br />
+                <span>18813331444</span>的彩铃吗？</p>
+            <div class="enterBtn">确认</div>
+        </div>
+        <!-- 确认开通 -->
+        <div class="submit">
+            <img class="close" src="./img/close.png" alt="">
+            <p>亲，你需要先开通视频彩铃功能，<br />
+                （每月6元，首月赠送6元话费），<br />
+                才可设置为自己的彩铃哟！</p>
+            <!-- <div class="enterBtn">设为彩铃</div> -->
+            <div class="btnGroup">
+                <span class="close">在想想</span>
+                <span>立即开通</span>
+            </div>
+        </div>
+        <!-- 成功 -->
+        <div class="success">
+            <img class="close" src="./img/close.png" alt="">
+            <p>恭喜，视频彩铃设置成功</p>
+            <div class="enterBtn">确认</div>
+        </div>
+        <!-- 失败 -->
+        <div class="fail">
+            <img class="close" src="./img/close.png" alt="">
+            <p>啊哦~系统开小差了，请稍后再试</p>
+            <div class="enterBtn">确认</div>
+        </div>
+        <!-- 详情 -->
+        <div class="detail">
+            <img class="close" src="./img/close.png" alt="">
+            <p>红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听</p>
+            <div class="flv">
+                <i class="pause-icon"></i>
+                <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+            </div>
+            <div class="enterBtn">设为彩铃</div>
+            <div class="smallDocs">
+                红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/rem.js"></script>
+<script src="./js/zepto.min.js"></script>
+<script>
+    $(function () {
+        $('li').eq(0).click(function () {
+            $('.pupop').show()
+            $('.tips').show()
+        })
+        $('li').eq(1).click(function () {
+            $('.pupop').show()
+            $('.submit').show()
+        })
+        $('li').eq(2).click(function () {
+            $('.pupop').show()
+            $('.success').show()
+        })
+        $('li').eq(3).click(function () {
+            $('.pupop').show()
+            $('.fail').show()
+        })
+        $('li').eq(4).click(function () {
+            $('.pupop').show()
+            $('.detail').show()
+        })
+
+
+        $('.close').click(function closeFn() {
+            $('.pupop').hide()
+            $('.pupop > div').hide()
+        })
+
+        $('#index').on('click', '.pause-icon', function () {
+            $(this).hide()
+            $(this).parents().children('video')[0].play();
+        })
+
+        // 弹窗时,禁止页面滚动
+        $('.pupop').on('touchmove', function (event) {
+            if(event.target.className.indexOf('pause-icon') === -1){
+                event.preventDefault()
+            }
+        })
+    })
+</script>
