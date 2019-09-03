@@ -339,12 +339,15 @@ header img {
   margin-bottom: 0.3rem;
 }
 .pupop .detail .smallDocs {
-  padding: 0 0.6rem 0 0.66rem;
+  margin: 0 0.4rem 0 0.66rem;
+  padding-right: .2rem;
   font-size: 0.22rem;
   font-family: FZLTHJW;
   font-weight: normal;
   color: #494848;
   line-height: 0.34rem;
+  height: 96px;
+  overflow-y: scroll;
 }
 .empty {
   display: none;

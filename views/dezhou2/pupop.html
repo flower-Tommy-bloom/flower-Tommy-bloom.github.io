@@ -66,6 +66,7 @@
             <div class="enterBtn">设为彩铃</div>
             <div class="smallDocs">
                 红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃
+                红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃
             </div>
         </div>
     </div>
@@ -97,6 +98,8 @@
             $('.detail').show()
         })
 
+        $('.pupop').show()
+        $('.detail').show()
 
         $('.close').click(function closeFn() {
             $('.pupop').hide()
@@ -110,7 +113,7 @@
 
         // 弹窗时,禁止页面滚动
         $('.pupop').on('touchmove', function (event) {
-            if(event.target.className.indexOf('pause-icon') === -1){
+            if (event.target.className.indexOf('smallDocs') === -1) {
                 event.preventDefault()
             }
         })

@@ -27,7 +27,7 @@
         <ul class="">
             <li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -44,7 +44,7 @@
             </li>
             <li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -61,7 +61,7 @@
             </li>
             <li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -78,7 +78,7 @@
             </li>
             <li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -102,7 +102,7 @@
         <ul>
             <li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -116,7 +116,7 @@
             </li>
             <li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -151,6 +151,20 @@
                 <span>立即开通</span>
             </div>
         </div>
+        <!-- 详情 -->
+        <div class="detail">
+            <img class="close" src="./img/close.png" alt="">
+            <p>红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听</p>
+            <div class="flv">
+                <i class="pause-icon"></i>
+                <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+            </div>
+            <div class="enterBtn">设为彩铃</div>
+            <div class="smallDocs">
+                红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃
+                红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃，红衣女孩（2019燃烧吧团魂第四场视频彩铃）娓娓动听，红衣女孩燃烧吧团魂第四场视频彩铃
+            </div>
+        </div>
     </div>
 </body>
 
@@ -158,10 +172,12 @@
 <script src="./js/rem.js"></script>
 <script src="./js/zepto.min.js"></script>
 <script>
+    // 设为彩铃
     $('ul').on('click', 'em', function () {
         $('.pupop').show()
         $('.submit').show()
     })
+    // 关闭弹窗
     $('.close').click(function () {
         $('.pupop').hide()
         $('.pupop > div').hide()
@@ -170,7 +186,7 @@
     $('.btn').click(function () {
         var html = `            <li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -189,7 +205,7 @@
                 </div>
             </li><li>
                 <div class="top">
-                    <video poster="./img/list_img.png" src="./img/testMp4.mp4" preload="auto"></video>
+                    <img src="./img/list_img.png" alt="">
                     <i class="pause-icon"></i>
                     <div class="corner">
                         <img src="./img/hot_left.png" alt="" class="">
@@ -211,16 +227,17 @@
         $('.list ul').append(html).append(html)
     })
 
-    $('#index').on('click', '.pause-icon', function () {
+    // 列表查看详情
+    $('#index').on('click', '.top', function () {
+        $('.pupop').show()
+        $('.detail').show()
+    })
+    // 播放视频
+    $('#index').on('click', '.flv .pause-icon', function () {
         $(this).hide()
         $(this).parents().children('video')[0].play();
     })
-
-    $('#index').on('click', 'video', function () {
-        $(this).parents().children('.pause-icon').hide()
-        $(this)[0].play();
-    })
-
+    // 搜索
     $('.search img').click(function () {
         $('.list').hide()
         // 找到的列表
@@ -241,7 +258,7 @@
     })
     // 弹窗时,禁止页面滚动
     $('.pupop').on('touchmove', function (event) {
-        if (event.target.className.indexOf('pause-icon') === -1) {
+        if (event.target.className.indexOf('smallDocs') === -1) {
             event.preventDefault()
         }
     })
