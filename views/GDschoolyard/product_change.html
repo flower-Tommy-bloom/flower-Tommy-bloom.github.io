@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport"  />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>校园专区</title>
+<link href="style/swiper.min.css" rel="stylesheet" type="text/css" />
+<link href="style/layer.css" rel="stylesheet" type="text/css" />
+<link href="style/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="layout indexbg">
+    <!--权益变更-->
+    <div class="club-content block_change">
+        <div class="title club-benifit-title">
+            <div class="titleline-l"></div>
+            <div class="title-txt">定向产品变更</div>
+            <div class="titleline-r"></div>
+        </div>
+        <div id="club_school_special">
+            <div class="club-school-title">请选择您想变更的定向产品</div>
+            <div class="club-school-product" id="quanyi_change">
+                <div class="swiper-container" id="product_quanyi_change">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide select"><div class="logo"><img src="image/logo/logo_douyin.png" /><span class="ico_select"></span></div><span>抖音</span></div>
+                        <div class="swiper-slide"><div class="logo"><img src="image/logo/logo_ximalaya.png" /><span class="ico_select"></span></div><span>喜马拉雅</span></div>
+                        <div class="swiper-slide"><div class="logo"><img src="image/logo/logo_douyin.png" /><span class="ico_select"></span></div><span>抖音</span></div>
+                        <div class="swiper-slide"><div class="logo"><img src="image/logo/logo_douyin.png" /><span class="ico_select"></span></div><span>抖音</span></div>
+                        <div class="swiper-slide"><div class="logo"><img src="image/logo/logo_douyin.png" /><span class="ico_select"></span></div><span>抖音</span></div>
+                        <div class="swiper-slide"><div class="logo"><img src="image/logo/logo_douyin.png" /><span class="ico_select"></span></div><span>抖音</span></div>
+                    </div>
+                </div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>  
+            </div>
+            
+            <!-- 领取 -->
+            <div class="club-renwokan-price-block">
+                <div class="club-renwokan-price club-renwokan-price-select">
+                    <div class="info">
+                        <p>30GB国内</p>
+                        <p>APP视频定向流量（爱奇艺）</p>
+                    </div>
+                    <div class="price">0元/月</div>
+                </div>
+                <div class="club-renwokan-price">
+                    <div class="info">
+                        <p>30GB国内</p>
+                        <p>APP视频定向流量（爱奇艺）</p>
+                    </div>
+                    <div class="price">0元/月</div>
+                </div>
+            </div>
+            <div class="club-school-title-rule">温馨提示：</div>
+            <ol class="club-school-rule">
+                <li>新卡激活后套餐立即生效，首月免月费，次月起月初一次性扣费，变更套餐或变更视频APP次月生效。</li>
+                <li>视频流量仅可在国内使用（不含港澳台）。</li>
+                <li>当余额不足时，做停机处理。</li>
+                <li>视频流量当月清零、不能分享、不能转赠，其他业务规则以当地为准，详询10086。</li>
+            </ol>
+            <div class="club-school-btn btn_change">确认变更</div>
+        </div>
+    </div>
+    
+    
+
+    
+	<script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/rem.dev.js"></script>
+    <script src="js/layer.js"></script>
+    <script src="js/msgbox.js"></script>
+    <script>
+   		var mySwiper5 = new Swiper('#product_quanyi_change', {
+			slidesPerView: 5,
+			spaceBetween: 10,
+			autoHeight:true, 
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			nextButton: '#quanyi_change .swiper-button-next',
+			prevButton: '#quanyi_change .swiper-button-prev',
+			observer:true,
+			observeParents:true,
+		})
+	</script>
+</body>
+</html>
