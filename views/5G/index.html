@@ -61,5 +61,22 @@
 </html>
 <script src="./js/rem.js"></script>
 <script>
-
+    for (let i = 0;i < 40;i++) {
+        let dot = document.createElement("i")
+        dot.classList.add('dot')
+        let w = sum(0.02,0.06) + 'rem'
+        dot.style.width = w
+        dot.style.height = w
+        let x = sum(1,13) + 'rem'
+        let y = sum(0,7.5) + 'rem'
+        dot.style.top = x
+        dot.style.left = y
+        dot.style.animationDelay = sum(1,3) + 's'
+        console.log(document.querySelector('.index'))
+        document.querySelector('.index').appendChild(dot)
+    }
+    function sum(m, n) {
+        var num = Math.random() * (m - n) + n;
+        return num
+    }
 </script>
