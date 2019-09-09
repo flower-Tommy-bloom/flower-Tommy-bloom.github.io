@@ -22,7 +22,7 @@
     <img src="./img/bg.png" alt="" class="bg">
     <img src="./img/left.png" alt="" class="left">
     <img src="./img/right.png" alt="" class="right">
-    <i class="dot dot1"></i>
+    <!-- <i class="dot dot1"></i>
     <i class="dot dot2"></i>
     <i class="dot dot3"></i>
     <i class="dot dot4"></i>
@@ -30,7 +30,7 @@
     <i class="dot dot6"></i>
     <i class="dot dot7"></i>
     <i class="dot dot8"></i>
-    <i class="dot dot9"></i>
+    <i class="dot dot9"></i> -->
     <div class="part part1">
         <img src="./img/location.png" alt="">
         <p class="pulse"></span>
@@ -53,15 +53,15 @@
     </div>
     <div class="part part5">
         <img src="./img/location.png" alt="">
-        <p class="pulse"></span>
-            <p class="pulse1"></span>
+        <!-- <p class="pulse"></span>
+            <p class="pulse1"></span> -->
     </div>
 </body>
 
 </html>
 <script src="./js/rem.js"></script>
 <script>
-    for (let i = 0;i < 40;i++) {
+    for (let i = 0;i < 50;i++) {
         let dot = document.createElement("i")
         dot.classList.add('dot')
         let w = sum(0.02,0.06) + 'rem'
@@ -71,6 +71,7 @@
         let y = sum(0,7.5) + 'rem'
         dot.style.top = x
         dot.style.left = y
+        dot.style.opacity = sum(2,1) - 1 
         dot.style.animationDelay = sum(1,3) + 's'
         console.log(document.querySelector('.index'))
         document.querySelector('.index').appendChild(dot)
