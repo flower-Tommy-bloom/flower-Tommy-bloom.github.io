@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <title>Document</title>
+    <script src="./js/rem.js" async></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="index">
+    <img src="./img/youku.png" class="bg">
+    <div class="floatBtn" onclick="openPupop('QRcode')">领取权益</div>
+    <div class="main">
+        <div class="from">
+            <div class="item">
+                <input type="number" placeholder="请输入手机号码">
+            </div>
+            <div class="item">
+                <input type="number" placeholder="请输入验证码">
+                <div class="sendCode">发送验证码</div>
+            </div>
+        </div>
+        <div class="btn" onclick="openPupop('confirm')">立即抢购</div>
+        <div class="ruleBtn" onclick="openPupop('rule')">其他说明</div>
+    </div>
+    <div class="pupop">
+        <div class="confirm">
+            <h2>业务办理确认</h2>
+            <p>您即将订购9元15GB搜狐定向流量包
+                现在办理享受前6个月6.6元优惠，优惠到期后按照标准资费收取
+                流量包生效首月赠送7天搜狐视频会员；
+            </p>
+            <div class="btnGroup">
+                <div class="btn" onclick="openPupop('result')">立即订购</div>
+                <div class="btn ok">残忍拒绝</div>
+            </div>
+        </div>
+        <div class="result">
+            <img src="./img/close.png" alt="" class="close">
+            <h2>订购已提交成功</h2>
+            <p>成功受理信息请以中国移动的短信通知为准。目前由于订购用户较多，短信通知可能会有时延，请耐心等待，感谢您对中国移动的支持；搜索关注“任我看助手”微信公众号，发现更多特惠产品</p>
+            <div class="btn ok">我知道了</div>
+        </div>
+        <div class="rule">
+            <img src="./img/close.png" class="close">
+            <div class="rule_docs">
+                <span>（一）活动说明</span>
+                1、关注微信公众号：中国移动流量助手，查询订购和退订，还有更多权益等你撩。
+                <br />2、活动期内，首次参与该优惠活动的客户，自成功订购搜狐9元15G定向流量包当月起，首月获赠7天搜狐视频体验会员（搜狐视频APP专属），退订后停止赠送；
+                <br />3、订购成功后5个工作日内，首月7天搜狐视频体验会员赠送至对应手机号的搜狐视频账号中（搜狐将获取您的手机号码发放权益，点击办理即授权页面提供号码）；
+                <br />4、首次订购搜狐定向流量包的小伙伴，首六月为6.6元/月，畅快体验；
+                <br />5、每位用户仅可参加一次本优惠活动；
+                <br />6、此次活动为中国移动客户专享，在参加活动时请保证电话畅通不欠费；
+                <br />7、本活动与苹果公司（Apple Inc.）无关；
+                <br />8、如小伙伴中途退订，将于次月生效，生效后将不再享受对应优惠哟；
+                <br />9、活动期内，广西、安徽、内蒙古、浙江、辽宁、宁夏、湖北、山西、陕西、黑龙江、四川、云南、新疆手机用户首次订购直接享受前六月费用减免优惠，第七个月开始正常收费；
+                <br />10、江西用户暂不参与此优惠活动。
+                <span>（二）定向流量使用说明：</span>
+                搜狐视频免流范围：
+                <br />中国移动2G/3G/4G网络下，访问搜狐视频APP中的特定视频内容。但不包括以下内容：
+                <br />1、客户端启动、登录及客户端内的图片、文字、视频内插播广告、弹幕、第三方广告、主播类视频、在线观看/下载/缓存第三方视频等。
+                <br />2、手机号码处于国际或港澳台地区漫游状态下产生的流量。
+                <br />3、利用手机设置代理服务器或VPN等方式，访问APP所产生的流量。
+                <br />4、用无线上网卡、平板电脑、CPE、MIFI等非手机设备使用产生的流量。
+                <br />5、手机作为热点使用产生的流量。
+                <br />6、使用CMWAP接入点方式，访问视频APP所产生的流量。
+                <span>（三）业务说明：</span>
+                1、产品采用话费支付，订购后立即生效，流量全额提供，每月的定向流量可供当月本机使用，使用范围为国内（不含港澳台）。
+                <br />2、请在WIFI功能关闭下使用免流功能，避免WIFI和移动网络频繁切换导致免流量服务启动失败。
+                <br />3、变更套餐次月生效，每月仅支持一次变更，不支持多次变更，具体规则请咨询当地10086为准。
+                <br />4、了解业务规则或退订业务，请关注微信公众号“中国移动流量助手”或详询10086操作。
+                <br />5、本活动中流量当月清零、不能分享、不能转赠。
+                <br />6、本产品的流量额度最高可使用到每月上网流量封顶值，且与其他上网功能产生的流量共享封顶值，用户号码封顶值与其使用的套餐有关，具体咨询10086。
+                <br />7、当通用流量使用达到降速阀值并降速后，定向流量会同时降速，用户订购提速服务后，降速解除。
+
+            </div>
+        </div>
+        <div class="QRcode"">
+            <img src="./img/close.png" class="close">
+            <p>关注xxx公众号马上领取权益</p>
+            <img class="QRcodeImg" src="./img/qrcode.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        // 页面全屏
+        fullscreen()
+    })
+
+    function openPupop(name) {
+        closePupop()
+        $('.pupop').show()
+        if (name === undefined) {
+            $('.result').show()
+            return
+        }
+        $('.' + name).show()
+
+    }
+
+    function closePupop() {
+        $('.pupop').hide()
+        $('.pupop > div').hide()
+    }
+    $('.close').click(function () {
+        closePupop()
+    })
+    $('.ok').click(function () {
+        closePupop()
+    })
+
+    function fullscreen() {
+        var H = window.screen.height
+        var W = window.screen.width
+        var top = $('.bg .top').height()
+        var bottom = $('.bg .bottom').height()
+        var midH = H - top * W / 375 - bottom * W / 375
+        $('.mid').height(midH)
+    }
+</script>

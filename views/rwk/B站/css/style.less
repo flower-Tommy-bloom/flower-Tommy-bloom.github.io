@@ -1,0 +1,408 @@
+@charset "UTF-8";
+
+/*css 初始化 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+div,
+span,
+p,
+em,
+i,
+s,
+header,
+section,
+article,
+nav,
+footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* ios点击黑影 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+fieldset,
+img,
+input,
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+/*去掉input等聚焦时的蓝色边框*/
+input:focus {
+    border: none;
+}
+
+select,
+input {
+    vertical-align: middle;
+}
+
+select,
+input,
+textarea {
+    font-size: 0.24rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止拖动*/
+img {
+    border: 0;
+    width: 100%;
+    display: block;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table {
+    border-collapse: collapse;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    /*清浮动*/
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*IE/7/6*/
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,
+i,
+em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*公共类*/
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.index {
+    position: relative;
+    background-color: #ffc0c1;
+    .floatBtn{
+        position: absolute;
+        top: 0.9rem;
+        right: 0;
+        width:2rem;
+        height:0.7rem;
+        background:#ff8290;
+        border-radius:0.1rem 0.02rem 0.02rem 0.1rem;
+
+        line-height: 0.7rem;
+        text-align: center;
+        font-size:0.3rem;
+        font-family:PingFangSC;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        z-index: 11;
+    }
+    .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .main{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .btn{
+        margin: 0 auto;
+        width:6.08rem;
+        height:0.78rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:rgba(157,213,251,1);
+        box-shadow: 0.02rem 0.06rem 0 0 #5674b0;
+        border-radius:0.38rem;
+        font-size:0.3rem;
+        font-family:PingFangSC;
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+    }
+    .from {
+        padding-top: 9.52rem;
+        .item {
+            margin: 0 auto;
+            margin-bottom: 0.3rem;
+            width:6.08rem;
+            height:0.78rem;
+            background:rgba(235,245,248,1);
+            border-radius:0.38rem;
+            padding-left: 0.3rem;
+            display: flex;
+            input{
+                flex: 1;
+                overflow: hidden;
+                font-size:0.3rem;
+                font-family:PingFangSC;
+                font-weight:400;
+                color:rgba(77,134,177,1);
+                &::placeholder{
+                    color:#CCCCCC;
+                }
+            }
+        }
+        .sendCode {
+            width:1.96rem;
+            height:0.6rem;
+            background:#FF818F;
+            border-radius:0.32rem;
+            margin-top: 0.12rem;
+            margin-right: 0.18rem;
+            text-align: center;
+            font-size:0.26rem;
+            font-family:SourceHanSansCN;
+            font-weight:400;
+            color:rgba(255,255,255,1);
+            line-height: 0.6rem;
+        }
+    }
+    .ruleBtn{
+        margin: 0.24rem auto 0;
+        padding-bottom: 0.3rem;
+        text-align: center;
+        font-size:0.28rem;
+        font-family:PingFangSC;
+        font-weight:600;
+        text-decoration:underline;
+        color:rgba(87,115,174,1);
+    }
+    .pupop{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 12;
+        .btn{
+            background-color: #9ed6fb;
+            color: #fff;
+            box-sizing: border-box;
+            box-shadow: none;
+            height: 0.78rem;
+            border-radius: 0.6rem;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        > div{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width:5.4rem;
+            padding-bottom: 0.6rem;
+            background:rgba(255,255,255,1);
+            border-radius:0.12rem;
+            .close{
+                position: absolute;
+                top: 0.3rem;
+                right: 0.4rem;
+                width: 0.24rem;
+                height: 0.24rem;
+            }
+            h2{
+                padding: 0.62rem 0 0.4rem;
+                font-size:0.36rem;
+                font-family:FZLTZHJW;
+                font-weight:bold;
+                color:rgba(34,34,34,1);
+                text-align: center;
+            }
+            p{
+                padding: 0 0.36rem;
+                font-size:0.28rem;
+                font-family:FZLTHJW;
+                font-weight:normal;
+                color:rgba(34,34,34,1);
+                line-height:0.4rem;
+                opacity:0.7;
+                margin-bottom: 0.44rem;
+            }
+            .btnGroup{
+                display: flex;
+                padding: 0 0.48rem;
+                justify-content: space-between;
+                .btn{
+                    margin: 0;
+                    width: 2rem;
+                    &:nth-child(2){
+                        background: #fff;
+                        color: #000;
+                        border: 0.02rem solid #ccc;
+                    }
+                }
+            }
+        }
+        .result{
+            padding-top: 0.86rem;
+            h2{
+                padding: 0;
+                padding-bottom: 0.4rem;
+            }
+            .resPic{
+                width: 3.48rem;
+                margin: 0 auto;
+            }
+            .btn{
+                width: 4rem;
+            }
+        }
+        .rule{
+            position: relative;
+            padding: 0.72rem 0.28rem 0.56rem;
+            height: 70%;
+            .close{
+                width: 0.24rem;
+                height: 0.24rem;
+            }
+            h2{
+                padding: 0;
+            }
+            p{
+                padding: 0;
+            }
+            h2{
+                text-align: left;
+            }
+            .rule_docs{
+                height: 100%;
+                overflow-y: scroll;
+                font-size:0.24rem;
+                font-family:FZLTHJW;
+                font-weight:normal;
+                color:rgba(102,102,102,1);
+                line-height:0.4rem;
+                margin-bottom: 0.44rem;
+                span{
+                    display: block;
+                    padding-bottom: 0.2rem;
+                    font-size:0.28rem;
+                    font-family:PingFangSC;
+                    font-weight:bold;
+                    color:rgba(34,34,34,1);
+                    line-height:0.36rem;
+                }
+            }
+        }
+        .QRcode{
+            .close{
+                z-index: 13;
+            }
+            >p{
+                font-size:0.32rem;
+                font-family:PingFangSC;
+                font-weight:400;
+                color:rgba(34,34,34,1);
+                line-height:0.4rem;
+                text-align: center;
+                padding: 0.8rem 0 0.4rem 0;
+            }
+            .QRcodeImg{
+                width: 1.84rem;
+                height: 1.84rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,382 @@
+@charset "UTF-8";
+/*css 初始化 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+div,
+span,
+p,
+em,
+i,
+s,
+header,
+section,
+article,
+nav,
+footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* ios点击黑影 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+fieldset,
+img,
+input,
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+  outline: none;
+  border: none;
+}
+/*去掉input等聚焦时的蓝色边框*/
+input:focus {
+  border: none;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 0.24rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+textarea {
+  resize: none;
+}
+/*防止拖动*/
+img {
+  border: 0;
+  width: 100%;
+  display: block;
+}
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table {
+  border-collapse: collapse;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+.clearfix:before,
+.clearfix:after {
+  /*清浮动*/
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+/*公共类*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.hide {
+  display: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.index {
+  position: relative;
+  background-color: #0d111d;
+}
+.index .floatBtn {
+  position: absolute;
+  top: 0.9rem;
+  right: 0;
+  width: 2rem;
+  height: 0.7rem;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0rem 0.02rem 0.08rem 0rem rgba(33, 72, 160, 0.5);
+  border-radius: 0.1rem 0.02rem 0.02rem 0.1rem;
+  line-height: 0.7rem;
+  text-align: center;
+  font-size: 0.3rem;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 11;
+}
+.index .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index .main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.index .btn {
+  margin: 0 auto;
+  width: 6.1rem;
+  height: 0.78rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #21adba;
+  border-radius: 0.38rem;
+  font-size: 0.3rem;
+  font-family: PingFangSC;
+  font-weight: bold;
+  color: #ffffff;
+}
+.index .from {
+  padding-top: 9.52rem;
+}
+.index .from .item {
+  margin: 0 auto;
+  margin-bottom: 0.44rem;
+  width: 6.08rem;
+  height: 0.78rem;
+  background: #ebf5f8;
+  border-radius: 0.38rem;
+  padding-left: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.index .from .item input {
+  flex: 1;
+  overflow: hidden;
+  font-size: 0.3rem;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #4d86b1;
+}
+.index .from .item input::placeholder {
+  color: #CCCCCC;
+}
+.index .from .sendCode {
+  width: 1.96rem;
+  height: 0.6rem;
+  background: #21adba;
+  border-radius: 0.32rem;
+  margin-right: 0.18rem;
+  text-align: center;
+  font-size: 0.26rem;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 0.6rem;
+}
+.index .ruleBtn {
+  margin: 0.24rem auto 0;
+  padding-bottom: 0.3rem;
+  text-align: center;
+  font-size: 0.28rem;
+  font-family: PingFangSC;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #21adba;
+}
+.index .pupop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 12;
+}
+.index .pupop .btn {
+  background-color: #21adba;
+  color: #fff;
+  box-sizing: border-box;
+  height: 0.78rem;
+  border-radius: 0.6rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.index .pupop > div {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5.68rem;
+  padding-bottom: 0.6rem;
+  background: #ffffff;
+  border-radius: 0.12rem;
+}
+.index .pupop > div .close {
+  position: absolute;
+  top: 0.32rem;
+  right: 0.4rem;
+  width: 0.24rem;
+  height: 0.24rem;
+}
+.index .pupop > div h2 {
+  padding: 0.62rem 0 0.4rem;
+  font-size: 0.36rem;
+  font-family: FZLTZHJW;
+  font-weight: bold;
+  color: #222222;
+  text-align: center;
+}
+.index .pupop > div p {
+  padding: 0 0.36rem;
+  font-size: 0.28rem;
+  font-family: FZLTHJW;
+  font-weight: normal;
+  color: #222222;
+  line-height: 0.4rem;
+  opacity: 0.7;
+  margin-bottom: 0.44rem;
+}
+.index .pupop > div .btnGroup {
+  display: flex;
+  padding: 0 0.48rem;
+  justify-content: space-between;
+}
+.index .pupop > div .btnGroup .btn {
+  margin: 0;
+  width: 2rem;
+}
+.index .pupop > div .btnGroup .btn:nth-child(2) {
+  background: #fff;
+  color: #000;
+  border: 0.02rem solid #ccc;
+}
+.index .pupop .result {
+  padding-top: 0.86rem;
+}
+.index .pupop .result h2 {
+  padding: 0;
+  padding-bottom: 0.4rem;
+}
+.index .pupop .result .resPic {
+  width: 3.48rem;
+  margin: 0 auto;
+}
+.index .pupop .result .btn {
+  width: 4rem;
+}
+.index .pupop .rule {
+  position: relative;
+  padding: 0.72rem 0.28rem 0.56rem;
+  height: 70%;
+}
+.index .pupop .rule .close {
+  width: 0.24rem;
+  height: 0.24rem;
+}
+.index .pupop .rule h2 {
+  padding: 0;
+}
+.index .pupop .rule p {
+  padding: 0;
+}
+.index .pupop .rule h2 {
+  text-align: left;
+}
+.index .pupop .rule .rule_docs {
+  height: 100%;
+  overflow-y: scroll;
+  font-size: 0.24rem;
+  font-family: FZLTHJW;
+  font-weight: normal;
+  color: #666666;
+  line-height: 0.4rem;
+  margin-bottom: 0.44rem;
+}
+.index .pupop .rule .rule_docs span {
+  display: block;
+  padding-bottom: 0.2rem;
+  font-size: 0.28rem;
+  font-family: PingFangSC;
+  font-weight: bold;
+  color: #222222;
+  line-height: 0.36rem;
+}
+.index .pupop .QRcode .close {
+  z-index: 13;
+}
+.index .pupop .QRcode > p {
+  font-size: 0.32rem;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #222222;
+  line-height: 0.4rem;
+  text-align: center;
+  padding: 0.8rem 0 0.4rem 0;
+}
+.index .pupop .QRcode .QRcodeImg {
+  width: 1.84rem;
+  height: 1.84rem;
+  margin: 0 auto;
+}
